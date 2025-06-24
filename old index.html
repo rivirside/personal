@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomer Rivir Yonatan - Research Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    body {
+      background: #1A1A3D;
+      color: #E0E0FF;
+      font-family: 'Exo 2', 'Roboto Mono', monospace;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Comet Shower Background */
+    #comet-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.6; /* Slightly reduced opacity to blend with content */
+    }
+
+    /* Header */
+    header {
+      background: #1A1A3D;
+      position: relative;
+      padding: 2rem 0;
+      overflow: hidden;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* VHS Glitch Effect for Title */
+    .vhs-glitch {
+      font-family: 'Exo 2', monospace;
+      color: #00FFFF;
+      text-shadow: 0 0 5px #00FFFF, 2px 2px 0 #C0C0C0;
+      position: relative;
+      animation: vhs-jitter 0.1s infinite alternate;
+    }
+    .vhs-glitch::before, .vhs-glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+    .vhs-glitch::before {
+      color: #C0C0C0;
+      left: -2px;
+      animation: vhs-shift 0.15s infinite;
+    }
+    .vhs-glitch::after {
+      color: #FFFFFF;
+      left: 2px;
+      animation: vhs-shift 0.2s infinite reverse;
+    }
+    @keyframes vhs-jitter {
+      0% { transform: translate(0); }
+      100% { transform: translate(1px, -1px); }
+    }
+    @keyframes vhs-shift {
+      0%, 100% { clip-path: inset(0 0 0 0); }
+      50% { clip-path: inset(10% 0 10% 0); }
+    }
+
+    /* Project Cards */
+    .project-card-wrapper {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      perspective: 1000px;
+      position: relative;
+    }
+    .project-card-wrapper.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-card {
+      position: relative;
+      background: linear-gradient(135deg, #2A2A52, #3A3A6E);
+      border: 2px solid #C0C0C0;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px #C0C0C0;
+      transition: transform 0.6s ease;
+      height: auto;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      image-rendering: pixelated;
+    }
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 0, #00FFFF 0);
+      transition: background-position 0.5s ease;
+      background-size: 100% 2px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+    }
+    .project-card.visible::before {
+      background-position: 0 0;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00FFFF;
+    }
+    .card-front, .card-back {
+      display: flex;
+      flex-direction: column;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 0;
+      padding: 1.5rem;
+      color: #E0E0FF;
+      box-sizing: border-box;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(135deg, #2A2A52, #3A3A6E);
+      border: 2px solid #00FFFF;
+      border-radius: 0.5rem;
+    }
+    .project-card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* Arcade Contact Buttons */
+    .contact-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #2A2A52, #3A3A6E);
+      color: #00FFFF;
+      font-family: 'Exo 2', monospace;
+      font-weight: 700;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 3px solid #C0C0C0;
+      text-decoration: none;
+      min-height: 80px;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .contact-button.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: calc(0.1s * var(--index));
+    }
+    .contact-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #00FFFF;
+    }
+    .contact-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 5px #00FFFF;
+    }
+    .contact-button::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: #00FFFF;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .contact-button:active::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-10px);
+    }
+
+    /* Section Pixelated Transition */
+    #about, #projects {
+      background: rgba(42, 42, 82, 0.5);
+      border-radius: 0.5rem;
+      transition: opacity 0.5s ease;
+    }
+    #about.visible, #projects.visible {
+      opacity: 1;
+    }
+
+    /* Text Backgrounds */
+    .title-bg {
+      background: rgba(0, 255, 255, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.25rem;
+      display: inline-block;
+      text-shadow: 0 0 5px #00FFFF;
+    }
+    .about-text-bg {
+      background: rgba(192, 192, 192, 0.2);
+      padding: 1rem;
+      border-radius: 0.25rem;
+    }
+
+    /* Retro Toggle Switch */
+    .bio-switch {
+      position: relative;
+    }
+    .bio-switch-label {
+      display: flex;
+      width: 240px;
+      height: 36px;
+      background: rgba(42, 42, 82, 0.8);
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid #00FFFF;
+    }
+    .bio-switch-option {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #E0E0FF;
+      z-index: 1;
+      font-family: 'Exo 2', monospace;
+      font-size: 0.9rem;
+      text-shadow: 0 0 3px #00FFFF;
+      padding: 0 0.25rem;
+    }
+    .bio-switch-bubble {
+      width: 33.33%;
+      height: 90%;
+      background: #00FFFF;
+      border-radius: 16px;
+      position: absolute;
+      top: 2px;
+      box-shadow: 0 0 10px #00FFFF;
+      transition: transform 0.3s ease;
+    }
+    .bio-switch-bubble.personal { transform: translateX(0); }
+    .bio-switch-bubble.academic { transform: translateX(100%); }
+    .bio-switch-bubble.contact { transform: translateX(200%); }
+    .bio-switch-label:active .bio-switch-bubble {
+      box-shadow: 0 0 15px #C0C0C0;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 640px) {
+      .bio-switch-label {
+        width: 180px;
+        height: 28px;
+      }
+      .bio-switch-option {
+        font-size: 0.7rem;
+        padding: 0 0.1rem;
+      }
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .bio-switch {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Comet Shower Canvas -->
+  <canvas id="comet-canvas"></canvas>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div>
+        <h1 class="text-4xl font-bold vhs-glitch" data-text="Tomer Rivir Yonatan">Tomer Rivir Yonatan</h1>
+        <p class="text-xl vhs-glitch" data-text="Amateur academic, explorer, and maker">Amateur academic, explorer, and maker</p>
+      </div>
+      <div class="bio-switch">
+        <div class="bio-switch-label" id="bio-switch-label">
+          <div class="bio-switch-option" data-view="personal">Personal</div>
+          <div class="bio-switch-option" data-view="academic">Academic</div>
+          <div class="bio-switch-option" data-view="contact">Contact</div>
+          <div class="bio-switch-bubble personal" id="bio-switch-bubble"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-12 fade-in">
+    <div class="container mx-auto px-4">
+      <div id="about-title" class="text-2xl font-semibold text-white mb-4">
+        <span class="title-bg">About Me</span>
+      </div>
+      <p id="bio-text" class="text-white leading-relaxed about-text-bg">
+        I am an amateur academic, adventurer, and science communicator with a passion for decentralized science, generative biology, and space exploration. My work spans innovative medical devices, biostatistical modeling, and speculative studies on human evolution. I’ve shared projects on platforms like Hackaday and Research Hub, and I’m always down to collaborate on a project!
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-12 fade-in">
+    <div class="container mx-auto px-4">
+      <div id="projects-title" class="text-2xl font-semibold text-white mb-6">
+        <span class="title-bg">Projects</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-1" id="project-cards">
+        <!-- Project Card 1: Lucid Diffuser -->
+        <div class="project-card-wrapper" style="--index: 0;" id="card-lucid">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Lucid Diffuser</h3>
+              <p class="text-gray-300 mb-4">
+                A dual-well aromatherapy diffuser designed to regulate sleep schedules through targeted scent delivery.
+              </p>
+              <a href="https://hackaday.io" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Lucid Diffuser - Details</h3>
+              <p class="text-gray-300 mb-4">
+                Microcontroller-based diffuser with programmable scent release cycles The goal of this project is to develop a sleep training device utilizing an olfaction based operant condition paradigm for improved sleep consistency.<br>
+                <a href="https://hackaday.io" class="text-cyan-400 hover:underline">Hackaday Article</a> | 
+                <a href="https://researchhub.com" class="text-cyan-400 hover:underline">Research Hub</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 2: Hemoglobin PMF -->
+        <div class="project-card-wrapper" style="--index: 1;" id="card-hemoglobin">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Hemoglobin PMF Models</h3>
+              <p class="text-gray-300 mb-4">
+                Analytic PMF for binomial and Adair models to visualize hemoglobin oxygen binding state distributions.
+              </p>
+              <a href="#" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Hemoglobin PMF Models - Details</h3>
+              <p class="text-gray-300 mb-4">
+                Derived PMFs using binomial (independent) and Adair (cooperative) models, validated against literature across pO₂ ranges. This lays groundwork to develop models for precise analysis of oxygen delivery in microcirculation, with applications in sensor calibration and the design of synthetic carriers.<br>
+                <a href="https://rivirside.github.io/Hb-Saturation/" class="text-cyan-400 hover:underline">Simulator</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 3: Biostats Simulator -->
+        <div class="project-card-wrapper" style="--index: 2;" id="card-biostats">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Biostats Simulator</h3>
+              <p class="text-gray-300 mb-4">
+                A tool to model the impact of sensitivity, specificity, and prevalence on diagnostic test accuracy metrics.
+              </p>
+              <a href="#" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Biostats Simulator - Details</h3>
+              <p class="text-gray-300 mb-4">
+                I built an interactive simulator to compute metrics like PPV, NPV, and F1-score across variable inputs. This interactive simulator is meant to be used as an educational tool for graduate medical and clinical science students and practicioners, clarifying the trade-offs in test design, aiding intuitive understanding for screening and diagnostics.<br>
+                <a href="https://rivirside.github.io/Biostats/" class="text-cyan-400 hover:underline">Try Simulator</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 4: Speciation Analysis -->
+        <div class="project-card-wrapper" style="--index: 3;" id="card-speciation">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Speciation Analysis</h3>
+              <p class="text-gray-300 mb-4">
+                Study of factors driving parametric speciation between humans on Earth and Mars.
+              </p>
+              <a href="#" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Speciation Analysis - Details</h3>
+              <p class="text-gray-300 mb-4">
+                Project in development.<br>
+                <a href="[Insert project URL]" class="text-cyan-400 hover:underline">Project Details TBA</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Work Card 1: Let's Code -->
+        <div class="project-card-wrapper" style="--index: 0;" id="card-lets-code">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Let's Code</h3>
+              <p class="text-gray-300 mb-4">
+                Exploring Swift for data science, ML, and embedded systems, through hands-on follow-along projects on my SwiftSafari blog and independent articles.
+              </p>
+              <a href="[Insert GitHub URL]" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Let's Code - Details</h3>
+              <p class="text-gray-300 mb-4">
+                I've written extensivley on foudnational Swift topics, building up to follow along projects applying these principles in the devleopment of various data science algorithms from scratch.<br>
+                <a href="https://rivir.medium.com" class="text-cyan-400 hover:underline">Medium Blog</a> | 
+                <a href="https://rivirside.github.com" class="text-cyan-400 hover:underline">GitHub</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Work Card 2: Tangency -->
+        <div class="project-card-wrapper" style="--index: 1;" id="card-tangency">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Tangency</h3>
+              <p class="text-gray-300 mb-4">
+                A nonprofit I co-founded to promote activism literacy and community initiatives.
+              </p>
+              <a href="#" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Tangency - Details</h3>
+              <p class="text-gray-300 mb-4">
+                Established in 2016 with friends to support activism. We offers grants, scholarships, our podcast (on hiatus), and no-cost advocacy consultations.<br>
+                <a href="#" class="text-cyan-400 hover:underline">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Work Card 3: Wetware Policy Project -->
+        <div class="project-card-wrapper" style="--index: 4;" id="card-wetware">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Wetware Policy Project</h3>
+              <p class="text-gray-300 mb-4">
+                A policy roadmap for wetware systems research from a UC Irvine course.
+              </p>
+              <a href="[Insert PDF URL]" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Wetware Policy Project - Details</h3>
+              <p class="text-gray-300 mb-4">
+                Developed policy research paper addressing regulation needs for wetware intelligence systems during a science policy and advocacy program at the University of California - Irvine.<br>
+                <a href="[Insert PDF URL]" class="text-cyan-400 hover:underline">PDF</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Work Card 4: Research Radar -->
+        <div class="project-card-wrapper" style="--index: 2;" id="card-research-radar">
+          <div class="project-card">
+            <div class="card-front">
+              <h3 class="text-xl font-semibold mb-2">Research Radar</h3>
+              <p class="text-gray-300 mb-4">
+                Videos explaining research papers, initially sponsored by Research Hub.
+              </p>
+              <a href="[Insert Video URL]" class="text-cyan-400 hover:underline">Read More</a>
+            </div>
+            <div class="card-back">
+              <h3 class="text-xl font-semibold mb-2">Research Radar - Details</h3>
+              <p class="text-gray-300 mb-4">
+                Created educational videos for popular papers. Sponsored by Research Hub Foundation, a nonprofit decentralized science organization.<br>
+                <a href="[Insert Video URL]" class="text-cyan-400 hover:underline">Videos</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Button 1: Medium -->
+        <a href="https://rivir.medium.com" class="contact-button" style="--index: 0;" id="card-medium">
+          Medium
+        </a>
+        <!-- Contact Button 2: Instagram -->
+        <a href="https://instagram.com/rainingallweek" class="contact-button" style="--index: 1;" id="card-instagram">
+          Instagram
+        </a>
+        <!-- Contact Button 3: ResearchHub -->
+        <a href="https://www.researchhub.com/author/975946" class="contact-button" style="--index: 2;" id="card-researchhub">
+          ResearchHub
+        </a>
+        <!-- Contact Button 4: Twitter - Social -->
+        <a href="https://x.com/rivirside" class="contact-button" style="--index: 3;" id="card-twitter-social">
+          Twitter - Social
+        </a>
+        <!-- Contact Button 5: Twitter - Academic -->
+        <a href="https://x.com/martianrain" class="contact-button" style="--index: 4;" id="card-twitter-academic">
+          Twitter - Academic
+        </a>
+        <!-- Contact Button 6: LinkedIn -->
+        <a href="https://www.linkedin.com/in/tomerzil/" class="contact-button" style="--index: 5;" id="card-linkedin">
+          LinkedIn
+        </a>
+        <!-- Contact Button 7: ResearchGate -->
+        <a href="https://www.researchgate.net/profile/Tomer-Zilbershtein" class="contact-button" style="--index: 6;" id="card-researchgate">
+          ResearchGate
+        </a>
+        <!-- Contact Button 8: OrcID -->
+        <a href="https://orcid.org/0000-0002-1059-4848" class="contact-button" style="--index: 7;" id="card-orcid">
+          OrcID
+        </a>
+        <!-- Contact Button 9: Goodreads -->
+        <a href="https://www.goodreads.com/user/show/179178890-tomer-zilbershtein" class="contact-button" style="--index: 8;" id="card-goodreads">
+          Goodreads
+        </a>
+        <!-- Contact Button 10: Personal Email -->
+        <a href="mailto:Personal@rivir.social" class="contact-button" style="--index: 9;" id="card-personal-email">
+          Personal Email
+        </a>
+        <!-- Contact Button 11: Academic Email -->
+        <a href="mailto:tomer@arizona.edu" class="contact-button" style="--index: 10;" id="card-academic-email">
+          Academic Email
+        </a>
+        <!-- Contact Button 12: Hackaday -->
+        <a href="https://hackaday.io/rivir" class="contact-button" style="--index: 11;" id="card-hackaday">
+          Hackaday
+        </a>
+        <!-- Contact Button 13: GitHub -->
+        <a href="https://github.com/rivirside" class="contact-button" style="--index: 12;" id="card-github">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (Hidden, managed by toggle) -->
+  <footer id="contact" class="bg-blue-900 text-white py-8 fade-in" style="display: none;">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+      <p class="text-gray-300 mb-4">
+        Interested in discussing my research or potential collaborations? Get in touch!
+      </p>
+      <p class="text-gray-300">Collaborations: <a href="mailto:Personal@rivir.social" class="text-cyan-400 hover:underline">Personal@rivir.social</a></p>
+      <p class="text-gray-300">Academic: <a href="mailto:tomer@arizona.edu" class="text-cyan-400 hover:underline">tomer@arizona.edu</a></p>
+      <p class="text-gray-300">Website: <a href="https://www.rivir.social" class="text-cyan-400 hover:underline">www.rivir.social</a></p>
+      <p class="text-gray-300">CV: <a href="[Insert CV URL]" class="text-cyan-400 hover:underline">Download CV</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Comet Shower Background
+    const cometCanvas = document.getElementById('comet-canvas');
+    const cometCtx = cometCanvas.getContext('2d');
+    cometCanvas.width = window.innerWidth;
+    cometCanvas.height = window.innerHeight;
+
+    const comets = [];
+    for (let i = 0; i < 10; i++) {
+      comets.push({
+        x: Math.random() * cometCanvas.width * 1.2, // Start slightly off-screen
+        y: -Math.random() * cometCanvas.height * 0.2,
+        size: Math.random() * 5 + 5,
+        speed: Math.random() * 5 + 3,
+        opacity: Math.random() * 0.3 + 0.2,
+        color: ['#FFFFFF', '#FFCCCB', '#ADD8E6', '#98FB98'][Math.floor(Math.random() * 4)] // Cyberpunk colors
+      });
+    }
+
+    function drawComets() {
+      cometCtx.fillStyle = 'rgba(26, 26, 61, 0.1)'; // Subtle fade for trail effect
+      cometCtx.fillRect(0, 0, cometCanvas.width, cometCanvas.height);
+      comets.forEach(comet => {
+        comet.x -= comet.speed; // Move left and slightly down
+        comet.y += comet.speed * 0.5;
+        if (comet.x < -comet.size || comet.y > cometCanvas.height + comet.size) {
+          comet.x = cometCanvas.width * 1.2 + Math.random() * 100;
+          comet.y = -Math.random() * cometCanvas.height * 0.2;
+        }
+        cometCtx.fillStyle = comet.color;
+        cometCtx.globalAlpha = comet.opacity;
+        cometCtx.beginPath();
+        cometCtx.arc(comet.x, comet.y, comet.size, 0, Math.PI * 2);
+        cometCtx.fill();
+        // Draw trail
+        const gradient = cometCtx.createLinearGradient(comet.x, comet.y, comet.x + comet.size * 5, comet.y - comet.size * 2);
+        gradient.addColorStop(0, `${comet.color}80`);
+        gradient.addColorStop(1, 'transparent');
+        cometCtx.strokeStyle = gradient;
+        cometCtx.lineWidth = comet.size;
+        cometCtx.beginPath();
+        cometCtx.moveTo(comet.x, comet.y);
+        cometCtx.lineTo(comet.x + comet.size * 5, comet.y - comet.size * 2);
+        cometCtx.stroke();
+      });
+      cometCtx.globalAlpha = 1;
+      requestAnimationFrame(drawComets);
+    }
+    drawComets();
+    window.addEventListener('resize', () => {
+      cometCanvas.width = window.innerWidth;
+      cometCanvas.height = window.innerHeight;
+      drawComets();
+    });
+
+    // Dynamic Card Height Adjustment
+    function adjustCardHeights() {
+      const visibleCards = document.querySelectorAll('.project-card-wrapper[style*="display: block"] .project-card');
+      if (visibleCards.length > 0) {
+        let maxHeight = 0;
+        visibleCards.forEach(card => {
+          const front = card.querySelector('.card-front');
+          const back = card.querySelector('.card-back');
+          const frontRect = front.getBoundingClientRect();
+          const backRect = back.getBoundingClientRect();
+          maxHeight = Math.max(maxHeight, frontRect.height, backRect.height);
+        });
+        visibleCards.forEach(card => {
+          card.style.height = `${maxHeight}px`;
+        });
+      }
+    }
+    window.addEventListener('load', adjustCardHeights);
+    window.addEventListener('resize', () => {
+      clearTimeout(window.resizeTimeout);
+      window.resizeTimeout = setTimeout(adjustCardHeights, 100);
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Entrance Animations
+    const fadeElements = document.querySelectorAll('.fade-in, .project-card-wrapper, .contact-button');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          adjustCardHeights();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(element => observer.observe(element));
+
+    // Card Flip
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (!e.target.closest('a')) {
+          card.classList.toggle('flipped');
+          console.log('Card flipped:', card.classList.contains('flipped'));
+        }
+      });
+    });
+
+    // Toggle Switch Logic
+    const bioText = document.getElementById('bio-text');
+    const aboutTitle = document.getElementById('about-title');
+    const projectsTitle = document.getElementById('projects-title');
+    const bioSwitchLabel = document.getElementById('bio-switch-label');
+    const bioSwitchBubble = document.getElementById('bio-switch-bubble');
+    const projectCards = document.getElementById('project-cards');
+    const researchCards = [
+      document.getElementById('card-lucid'),
+      document.getElementById('card-hemoglobin'),
+      document.getElementById('card-biostats'),
+      document.getElementById('card-speciation')
+    ];
+    const additionalCards = [
+      document.getElementById('card-lets-code'),
+      document.getElementById('card-tangency'),
+      document.getElementById('card-research-radar')
+    ];
+    const academicCards = [
+      document.getElementById('card-wetware')
+    ];
+    const contactCards = [
+      document.getElementById('card-medium'),
+      document.getElementById('card-instagram'),
+      document.getElementById('card-researchhub'),
+      document.getElementById('card-twitter-social'),
+      document.getElementById('card-twitter-academic'),
+      document.getElementById('card-linkedin'),
+      document.getElementById('card-researchgate'),
+      document.getElementById('card-orcid'),
+      document.getElementById('card-goodreads'),
+      document.getElementById('card-personal-email'),
+      document.getElementById('card-academic-email'),
+      document.getElementById('card-hackaday'),
+      document.getElementById('card-github')
+    ];
+    const contactFooter = document.getElementById('contact');
+
+    function setView(view) {
+      bioSwitchBubble.className = `bio-switch-bubble ${view}`;
+      // Hide all cards initially
+      [...researchCards, ...additionalCards, ...academicCards, ...contactCards].forEach(card => {
+        if (card) card.style.display = 'none';
+      });
+      switch (view) {
+        case 'personal':
+          aboutTitle.innerHTML = '<span class="title-bg">About Me</span>';
+          projectsTitle.innerHTML = '<span class="title-bg">Projects</span>';
+          bioText.textContent = "I’m Tomer. I like building things—from apps and electronics to ideas that live in notebooks. I spend a lot of time outdoors, especially diving, hiking, or camping off-grid. I’m drawn to projects that feel useful, a little weird, and worth the effort. I’m always looking to collaborate on educational and advocacy projects that spark curiosity or drive change.";
+          additionalCards.forEach(card => {
+            if (card) card.style.display = 'block';
+          });
+          contactFooter.style.display = 'none';
+          projectCards.style.display = 'grid';
+          console.log('Set to personal view:', additionalCards.map(card => card ? card.id : 'null'));
+          break;
+        case 'academic':
+          aboutTitle.innerHTML = '<span class="title-bg">About Me</span>';
+          projectsTitle.innerHTML = '<span class="title-bg">Research Projects</span>';
+          bioText.textContent = "I’m a medical student at the University of Arizona College of Medicine – Phoenix with interests in aerospace and exploratory medicine, generative biology, and using randomness to model complex systems. I’ve taken on leadership roles in the Aerospace Medicine, Artificial Intelligence, and Jewish Medical Student groups. I’m also pursuing a Certificate of Distinction in Global Health, with research focused on how culture shapes health systems—work I hope to apply to the design and delivery of extraplanetary healthcare.";
+          researchCards.forEach(card => {
+            if (card) card.style.display = 'block';
+          });
+          academicCards.forEach(card => {
+            if (card) card.style.display = 'block';
+          });
+          contactFooter.style.display = 'none';
+          projectCards.style.display = 'grid';
+          break;
+        case 'contact':
+          aboutTitle.innerHTML = '';
+          projectsTitle.innerHTML = '';
+          bioText.textContent = "Connect with me through my social and professional channels below.";
+          contactCards.forEach(card => {
+            if (card) card.style.display = 'block';
+          });
+          contactFooter.style.display = 'block';
+          projectCards.style.display = 'grid';
+          break;
+      }
+      adjustCardHeights();
+    }
+
+    bioSwitchLabel.addEventListener('click', (e) => {
+      const option = e.target.closest('.bio-switch-option');
+      if (option) {
+        setView(option.dataset.view);
+      }
+    });
+
+    // Initialize personal view on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initial hide of non-personal cards as fallback
+      [...researchCards, ...academicCards, ...contactCards].forEach(card => {
+        if (card) card.style.display = 'none';
+      });
+      setView('personal');
+      adjustCardHeights();
+      console.log('DOM loaded, initial view set to personal');
+    });
+  </script>
+</body>
+</html>
