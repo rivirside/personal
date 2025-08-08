@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomer Rivir Yonatan | Solar Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tomer Rivir Yonatan Zilbershtein - Portfolio</title>
     <style>
+        /* Custom NASA font */
+        @font-face {
+            font-family: 'Nasalization';
+            src: url('NASALIZA.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
-            --dark-space: #0b0c10;
-            --mid-space: #1f2833;
-            --light-accent: #ffcc00;
+            --primary-color: #6B46C1;
+            --secondary-color: #9333EA;
+            --accent-color: #F59E0B;
+            --text-color: #FFFFFF;
+            --bg-color: #0F0F23;
             --secondary-accent: #ff6600;
-            --text-color: #c5c6c7;
-            --toggle-border: #00FFFF;
-            --glow-color: rgba(0, 255, 255, 0.7);
+            --light-accent: rgba(255, 204, 0, 0.8);
         }
 
         html, body {
@@ -22,11 +33,11 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: var(--dark-space);
+            background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
-        
+
         .parallax {
             height: 100vh;
             overflow-x: hidden;
@@ -35,7 +46,7 @@
             transform-style: preserve-3d;
             scroll-behavior: smooth;
         }
-        
+
         .parallax__layer {
             position: absolute;
             top: 0;
@@ -54,7 +65,151 @@
             transform: translateZ(-300px) scale(2);
             z-index: -1;
         }
+
+        #animation-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #planet-orbit-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+
+        .star {  
+            position: absolute;  
+            background-color: white;  
+            border-radius: 50%;  
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {  
+            0%, 100% { opacity: 0.5; }  
+            50% { opacity: 1; }  
+        }
+
+        /* Navigation Button */
+        .nav-button {
+            position: absolute;
+            top: 52vh;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 21;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.4);
+            border: 2px solid transparent;
+            display: inline-block;
+        }
         
+        .nav-button:hover {
+            transform: translateX(-50%) translateY(-2px);
+            box-shadow: 0 6px 25px rgba(147, 51, 234, 0.6);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Satellite/Space Station Animation */
+        #satellite {
+            position: absolute;
+            top: 10vh;
+            left: -15%;
+            width: 120px;
+            height: 25px;
+            z-index: 15;
+            animation: orbit-earth 45s linear infinite;
+            cursor: pointer;
+            transition: filter 0.3s ease;
+        }
+        
+        #satellite:hover {
+            filter: brightness(1.3) drop-shadow(0 0 10px rgba(74, 144, 226, 0.8));
+        }
+        
+        .satellite-body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #8d99ae, #edf2f4, #8d99ae);
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .solar-panel {
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background: linear-gradient(90deg, #2b2d42, #4A90E2, #2b2d42);
+            border: 1px solid #edf2f4;
+            border-radius: 3px;
+        }
+        
+        .panel-left { 
+            top: 50%; 
+            right: 90%; 
+            transform: translateY(-50%); 
+        }
+        
+        .panel-right { 
+            top: 50%; 
+            left: 90%; 
+            transform: translateY(-50%); 
+        }
+        
+        @keyframes orbit-earth {
+            from { 
+                transform: translateX(0vw) translateY(0) rotate(-5deg); 
+            }
+            25% { 
+                transform: translateX(30vw) translateY(5vh) rotate(0deg); 
+            }
+            50% { 
+                transform: translateX(60vw) translateY(0) rotate(5deg); 
+            }
+            75% { 
+                transform: translateX(90vw) translateY(-5vh) rotate(0deg); 
+            }
+            to { 
+                transform: translateX(120vw) translateY(0) rotate(-5deg); 
+            }
+        }
+        
+        .satellite-signal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px;
+            border: 2px solid rgba(74, 144, 226, 0.5);
+            border-radius: 50%;
+            animation: signal-pulse 2s ease-out infinite;
+        }
+        
+        @keyframes signal-pulse {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        /* Intro Header */
         #intro-header {
             position: absolute;
             top: 25vh;
@@ -67,60 +222,113 @@
             transition: opacity 0.5s ease-out;
         }
 
-        /* --- Space Station --- */
-        #space-station {
-            position: absolute;
-            top: 15vh;
-            left: -20%;
-            width: 150px;
-            height: 30px;
-            z-index: 10;
-            animation: float-across 60s linear infinite;
-            cursor: pointer; /* Added cursor to indicate it's clickable */
-        }
-        .station-body {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, #8d99ae, #edf2f4, #8d99ae);
-            border-radius: 5px;
+        .hero-title {
+            font-family: 'Nasalization', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 
+                0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 40px rgba(74, 144, 226, 0.3),
+                2px 2px 4px rgba(0, 0, 0, 0.5);
             position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .station-panel {
-            position: absolute;
-            width: 120px;
-            height: 10px;
-            background: linear-gradient(90deg, #2b2d42, #8d99ae, #2b2d42);
-            border: 1px solid #edf2f4;
-            border-radius: 3px;
-        }
-        .panel-left { top: 50%; right: 90%; transform: translateY(-50%); }
-        .panel-right { top: 50%; left: 90%; transform: translateY(-50%); }
-
-        @keyframes float-across {
-            from { transform: translateX(0vw) rotate(-5deg); }
-            to { transform: translateX(120vw) rotate(5deg); }
-        }
-
-
-        #animation-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-        .star {  
-            position: absolute;  
-            background-color: white;  
-            border-radius: 50%;  
-            animation: twinkle 5s infinite;  
-        }
-        @keyframes twinkle {  
-            0%, 100% { opacity: 0.5; }  
-            50% { opacity: 1; }  
+            animation: subtle-glow 4s ease-in-out infinite alternate;
         }
         
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            animation: expand-line 2s ease-out forwards;
+        }
+        
+        @keyframes expand-line {
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes subtle-glow {
+            from {
+                text-shadow: 
+                    0 0 20px rgba(255, 255, 255, 0.5),
+                    0 0 40px rgba(74, 144, 226, 0.3),
+                    2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            to {
+                text-shadow: 
+                    0 0 30px rgba(255, 255, 255, 0.7),
+                    0 0 60px rgba(74, 144, 226, 0.5),
+                    2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 0.08em;
+        }
+
+        /* View Toggle */
+        #view-toggle {
+            position: absolute;
+            top: 61vh;  /* Increased from 60vh to add more space from button */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 90%;
+            max-width: 600px;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .scroll-indicator {
+            text-align: center;
+            opacity: 0.7;
+            animation: fadeInOut 3s ease-in-out infinite;
+        }
+
+        .scroll-indicator p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .scroll-arrow {
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            border-right: 2px solid white;
+            border-bottom: 2px solid white;
+            transform: rotate(45deg);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); }
+            50% { transform: rotate(45deg) translateY(5px); }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Sun System */
         #sun-container {
             position: relative;
             top: 0;
@@ -175,9 +383,20 @@
             animation-timing-function: linear;
         }
         
-        @keyframes spin-clockwise { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @keyframes spin-counter-clockwise { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
-        @keyframes pulseCorona { from { transform: scale(1); } to { transform: scale(1.1); } }
+        @keyframes spin-clockwise { 
+            from { transform: rotate(0deg); } 
+            to { transform: rotate(360deg); } 
+        }
+        
+        @keyframes spin-counter-clockwise { 
+            from { transform: rotate(0deg); } 
+            to { transform: rotate(-360deg); } 
+        }
+        
+        @keyframes pulseCorona { 
+            from { transform: scale(1); } 
+            to { transform: scale(1.1); } 
+        }
 
         .solar-flare {
             position: absolute;
@@ -196,61 +415,38 @@
             100% { transform: scaleY(1); opacity: 0; }
         }
 
-        #view-toggle {
+        /* Orbiting Planets */
+        .orbiting-planet {
             position: absolute;
-            top: 60vh;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 20;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            width: 90%;
-            max-width: 600px;
-            transition: opacity 0.5s ease-out;
+            border-radius: 50%;
+            box-shadow: inset 10px 0px 15px rgba(0,0,0,0.4), inset -2px -2px 10px rgba(255,255,255,0.2);
+            animation: slow-spin 45s linear infinite;
+            background-size: 250% 100%;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            will-change: transform, box-shadow, filter;
         }
 
-        .mission-select-title {
-            font-family: 'Exo 2', sans-serif;
-            font-size: 1.25rem;
-            color: white;
-            text-shadow: 0 0 5px var(--toggle-border);
-        }
-
-        .mission-buttons { display: flex; justify-content: center; gap: 1rem; width: 100%; }
-        .toggle-btn {
-            flex: 1; padding: 1rem; cursor: pointer; color: var(--text-color);
-            transition: all 0.3s ease; font-family: 'Exo 2', sans-serif;
-            border: 2px solid var(--toggle-border); border-radius: 8px;
-            text-align: center; background-color: rgba(31, 40, 51, 0.5);
-            backdrop-filter: blur(5px);
-        }
-        .toggle-btn:hover { background-color: rgba(0, 255, 255, 0.2); box-shadow: 0 0 15px var(--toggle-border); }
-        .toggle-btn.active { background-color: var(--toggle-border); color: var(--dark-space); font-weight: bold; box-shadow: 0 0 20px var(--toggle-border); }
-        .toggle-btn .mission-subtitle { font-size: 0.8rem; font-weight: 300; display: block; margin-top: 0.25rem; }
-        .toggle-btn.active .mission-subtitle { color: var(--dark-space); font-weight: 400; }
-
-        .content-wrapper { 
-            opacity: 0; 
-            transition: opacity 1s ease; 
-            padding-top: 0;
-            margin-top: -120vh;
-        }
-        .content-section { 
-            padding: 5rem 2rem;
-            max-width: 900px; 
-            margin: 10rem auto;
-            position: relative; 
-        }
-
-        #planet-orbit-container {
+        .orbiting-planet::before {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            transform-style: preserve-3d;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .orbiting-planet:hover {
+            transform: scale(1.15) translateZ(50px);
+            filter: brightness(1.2) contrast(1.1);
+            animation-play-state: paused;
+        }
+
+        .orbiting-planet:hover::before {
+            opacity: 1;
         }
 
         @keyframes slow-spin {
@@ -258,164 +454,375 @@
             to { background-position-x: 250%; }
         }
 
-        .orbiting-planet {
+        /* Planet Info Cards */
+        .planet-info {
             position: absolute;
-            border-radius: 50%;
-            box-shadow: inset 10px 0px 15px rgba(0,0,0,0.4), inset -2px -2px 10px rgba(255,255,255,0.2);
-            animation: slow-spin 45s linear infinite;
-            background-size: 250% 100%;
+            background: linear-gradient(135deg, rgba(15, 15, 35, 0.95), rgba(30, 30, 60, 0.95));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            color: white;
+            font-size: 0.9rem;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 100;
+            min-width: 250px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.5),
+                0 0 80px rgba(107, 70, 193, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
         }
 
+        .planet-info::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            border-radius: 15px;
+            opacity: 0.3;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        .planet-info.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .planet-info h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .planet-info p {
+            margin: 0.3rem 0;
+            line-height: 1.4;
+        }
+
+        .planet-info .stat {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0;
+        }
+
+        .planet-info .stat:last-child {
+            border-bottom: none;
+        }
+
+        /* Orbital rings on hover */
+        .orbital-ring {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            transition: all 0.6s ease;
+            animation: orbit-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes orbit-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        .orbiting-planet:hover .orbital-ring {
+            opacity: 1;
+        }
+
+        /* Individual Planets with realistic spacing */
         #orbit-mercury {
             width: 30px; height: 30px;
             background-image: radial-gradient(circle at 20% 20%, #e0e0e0, #a9a9a9 60%, #888888 100%);
-            top: 130vh; left: 80%; transform: translateZ(-500px);
+            top: 180vh; left: 80%; transform: translateZ(-500px);
         }
+        #orbit-mercury:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 30px rgba(224, 224, 224, 0.8),
+                0 0 60px rgba(169, 169, 169, 0.5);
+        }
+
         #orbit-venus {
             width: 55px; height: 55px;
             background-image: radial-gradient(circle at 20% 20%, #f5e4c3, #d9aE7c 60%, #c28e5a 100%);
-            top: 155vh; left: 15%; transform: translateZ(-350px);
+            top: 205vh; left: 15%; transform: translateZ(-350px);
         }
+        #orbit-venus:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 35px rgba(245, 228, 195, 0.8),
+                0 0 70px rgba(217, 174, 124, 0.6),
+                0 0 100px rgba(194, 142, 90, 0.3);
+        }
+
         #orbit-earth {
             width: 60px; height: 60px;
             background-image: radial-gradient(circle at 65% 35%, #ffffff 1%, #cde5f5 4%, #6f90a5 50%, #466a85 80%);
-            top: 180vh; left: 75%; transform: translateZ(-250px);
+            top: 230vh; left: 75%; transform: translateZ(-250px);
         }
+        #orbit-earth:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 40px rgba(74, 144, 226, 0.8),
+                0 0 80px rgba(111, 144, 165, 0.6),
+                0 0 120px rgba(70, 106, 133, 0.3);
+        }
+
         #orbit-mars {
             width: 45px; height: 45px;
             background-image: radial-gradient(circle at 70% 20%, #ffdfc4 1%, #f4a27f 10%, #d87c5a 50%, #c96740 100%);
-            top: 205vh; left: 25%; transform: translateZ(-350px);
+            top: 255vh; left: 25%; transform: translateZ(-350px);
         }
+        #orbit-mars:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 35px rgba(216, 124, 90, 0.8),
+                0 0 70px rgba(201, 103, 64, 0.6),
+                0 0 100px rgba(201, 64, 40, 0.3);
+        }
+
         #asteroid-belt-container {
             position: absolute;
-            top: 230vh; left: 0; right: 0; height: 10vh;
+            top: 280vh; left: 0; right: 0; height: 10vh;
             transform: translateZ(-700px);
             transform-style: preserve-3d;
         }
+
         .asteroid {
-            position: absolute; background: #5c5c5c;
+            position: absolute; 
+            background: #5c5c5c;
             box-shadow: inset 2px 2px 2px #333, inset -1px -1px 2px #999;
             animation: spin-clockwise 20s linear infinite;
         }
+
         #orbit-jupiter {
             width: 120px; height: 120px;
             background-image: 
                 repeating-linear-gradient(170deg, #e3c08b, #e3c08b 10px, #c98e6d 10px, #c98e6d 20px, #d3c0a3 20px, #d3c0a3 30px),
                 radial-gradient(circle at 50% 50%, #e0ac69 40%, #a26b3e 110%);
             background-blend-mode: overlay;
-            top: 250vh; left: 65%; transform: translateZ(-600px);
+            top: 300vh; left: 65%; transform: translateZ(-600px);
         }
+        #orbit-jupiter:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 50px rgba(224, 172, 105, 0.8),
+                0 0 100px rgba(201, 142, 109, 0.6),
+                0 0 150px rgba(162, 107, 62, 0.3);
+        }
+
         #orbit-saturn {
             width: 90px; height: 90px;
             background-image: radial-gradient(ellipse at center, #f5d6af 0%, #e3c08b 50%, #c9a96e 100%);
-            top: 280vh; left: 30%; transform: translateZ(-500px);
+            top: 330vh; left: 30%; transform: translateZ(-500px);
         }
+        #orbit-saturn:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 35px rgba(245, 214, 175, 0.8),
+                0 0 70px rgba(201, 169, 110, 0.5);
+        }
+
         #orbit-saturn::after {
             content: ''; position: absolute;
             width: 180px; height: 180px; left: -45px; top: -45px;
             border-radius: 50%;
             box-shadow: 0 1px 0 8px #a8947c, inset 0 0 5px rgba(0,0,0,0.4);
             transform: rotateX(70deg) rotateZ(10deg);
+            transition: box-shadow 0.3s ease;
         }
+        #orbit-saturn:hover::after {
+            box-shadow: 0 1px 0 10px #a8947c, 0 0 20px rgba(168, 148, 124, 0.6), inset 0 0 5px rgba(0,0,0,0.4);
+        }
+
         #orbit-uranus {
             width: 70px; height: 70px;
             background-image: radial-gradient(circle at center, #d1e7e8, #a7d8d9 70%);
-            top: 305vh; left: 70%; transform: translateZ(-450px) rotateZ(97deg);
+            top: 355vh; left: 70%; transform: translateZ(-450px) rotateZ(97deg);
         }
+        #orbit-uranus:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 30px rgba(209, 231, 232, 0.8),
+                0 0 60px rgba(167, 216, 217, 0.5);
+        }
+
         #orbit-neptune {
             width: 65px; height: 65px;
             background-image: radial-gradient(circle at center, #5b87e5, #3b5a9a 80%);
-            top: 330vh; left: 20%; transform: translateZ(-400px);
+            top: 380vh; left: 20%; transform: translateZ(-400px);
         }
-        #orbit-pluto {
-            width: 20px; height: 20px;
-            background-image: radial-gradient(circle at 20% 20%, #e3d9c9, #b9a890 80%);
-            top: 350vh; left: 80%; transform: translateZ(-800px);
-        }
-        
-        .content-box {
-            background-color: rgba(11, 12, 16, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            position: relative;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-            overflow: hidden;
-            background-image:  
-                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 20px 20px;
+        #orbit-neptune:hover {
+            box-shadow: 
+                inset 10px 0px 15px rgba(0,0,0,0.4), 
+                inset -2px -2px 10px rgba(255,255,255,0.2),
+                0 0 30px rgba(91, 135, 229, 0.8),
+                0 0 60px rgba(59, 90, 154, 0.5);
         }
 
-        .content-box::before {
-            content: '';
+        /* Cursor trail effect */
+        .cursor-trail {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Content sections */
+        .content-wrapper { 
+            opacity: 0; 
+            transition: opacity 1s ease; 
+            padding-top: 0;
+            margin-top: -120vh;
+        }
+
+        .content-section { 
+            padding: 5rem 2rem;
+            max-width: 900px; 
+            margin: 10rem auto;
+            position: relative; 
+            background-color: rgba(11, 12, 16, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .content-section h2 {
+            color: white;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .content-section p {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Game Modal Styles */
+        #game-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: modalFadeIn 0.5s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: 2% auto;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #0B0E1F 0%, #1B1464 50%, #0B0E1F 100%);
+            border-radius: 15px;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 50px rgba(107, 70, 193, 0.5);
+            overflow: hidden;
+            animation: modalSlideIn 0.5s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10001;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        
+        .close-btn:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .modal-header {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            border-radius: 15px;
-            border: 2px solid transparent;
-            background: linear-gradient(45deg, var(--toggle-border), var(--light-accent)) border-box;
-            -webkit-mask:
-                linear-gradient(#fff 0 0) padding-box, 
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: destination-out;
-            mask-composite: exclude;
-            animation: glow-rotate 4s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes glow-rotate {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .content-box h2 {
-            color: white;
-            border-bottom: 2px solid var(--toggle-border);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            text-shadow: 0 0 8px var(--glow-color);
-            font-family: 'Exo 2', sans-serif;
-            font-weight: 600;
-            letter-spacing: 1px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-radius: 15px 15px 0 0;
+            z-index: 10000;
         }
         
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .project-card { 
-            background-color: rgba(31, 40, 51, 0.7);
-            padding: 1.5rem;
-            border-radius: 10px; 
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease; 
-            box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.1);
-            color: var(--text-color);
-            text-decoration: none;
-        }
-        .project-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 0 20px var(--glow-color), inset 0 0 15px rgba(0, 255, 255, 0.2);
-            border-color: var(--toggle-border);
-        }
-        .project-card h3 { margin-top: 0; color: white; text-shadow: 0 0 5px var(--glow-color);}
-        .project-card .role { font-style: italic; color: var(--toggle-border); margin-bottom: 0.75rem; }
-        .project-card .link-style { color: var(--toggle-border); text-decoration: underline; }
-
-
-        [data-view]:not(.active-view) { display: none; }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            padding-bottom: 50vh;
+        .modal-title {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
+    
+    <!-- Game Modal -->
+    <div id="game-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">🎮 Asteroid Destroyer</span>
+                <span class="close-btn">&times;</span>
+            </div>
+            <iframe id="game-frame" src=""></iframe>
+        </div>
+    </div>
     
     <div class="parallax">
         <div class="parallax__layer parallax__layer--back">
@@ -430,38 +837,35 @@
                     <div class="orbiting-planet" id="orbit-saturn"></div>
                     <div class="orbiting-planet" id="orbit-uranus"></div>
                     <div class="orbiting-planet" id="orbit-neptune"></div>
-                    <div class="orbiting-planet" id="orbit-pluto"></div>
                 </div>
             </div>
         </div>
 
         <div class="parallax__layer parallax__layer--base">
-
-             <div id="space-station">
-                <div class="station-body">
-                    <div class="station-panel panel-left"></div>
-                    <div class="station-panel panel-right"></div>
+            
+            <!-- Satellite Animation -->
+            <div id="satellite">
+                <div class="satellite-body">
+                    <div class="solar-panel panel-left"></div>
+                    <div class="solar-panel panel-right"></div>
+                    <div class="satellite-signal"></div>
                 </div>
             </div>
 
-             <div id="intro-header">
-                   <h1 class="text-5xl md:text-7xl font-bold" style="font-family: 'Exo 2', sans-serif; text-shadow: 0 0 10px rgba(255,255,255,0.3);">Tomer Rivir Yonatan</h1>
-                   <p class="text-lg md:text-2xl mt-4" style="font-family: 'Exo 2', sans-serif;">Amateur academic, explorer, and maker</p>
-             </div>
+            <div id="intro-header">
+                <h1 class="hero-title">Tomer Rivir Yonatan Zilbershtein</h1>
+                <p class="hero-subtitle">a little lunacy never hurt nobody</p>
+            </div>
+            
+            <!-- Documentation Button positioned above scroll indicator -->
+            <a href="docs.html" class="nav-button">📚 My Life</a>
 
-             <div id="view-toggle">
-                   <p class="mission-select-title">Select Your Mission</p>
-                   <div class="mission-buttons">
-                         <div class="toggle-btn active" data-target="moon">
-                               <span>Terrestrial Logs</span>
-                               <span class="mission-subtitle">(Creative & Personal)</span>
-                         </div>
-                         <div class="toggle-btn" data-target="mars">
-                               <span>Stellar Logs</span>
-                               <span class="mission-subtitle">(Academic & Research)</span>
-                         </div>
-                   </div>
-             </div>
+            <div id="view-toggle">
+                <div class="scroll-indicator">
+                    <p>Scroll to journey past the sun</p>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
 
             <div id="sun-container">
                 <div id="sun-corona"></div>
@@ -469,141 +873,8 @@
                 <div id="coronal-loops-container"></div>
             </div>
 
-            <main class="content-wrapper">
-                <section id="mission-briefing" class="content-section">
-                    <div class="content-box">
-                        <h2>MISSION BRIEFING</h2>
-                        <div data-view="moon" class="active-view">
-                            <p>To explore creative frontiers through code, craft, and community. Key directives include: documenting terrestrial and subterranean journeys, forging open-source tools that spark curiosity, and collaborating on projects that advocate for a more thoughtful and engaged world.</p>
-                        </div>
-                         <div data-view="mars">
-                            <p>To integrate clinical medicine with the unique challenges of aerospace environments. Primary directives include: modeling complex biological systems under extreme variables, developing novel frameworks for extraplanetary healthcare, and contributing to the policy and science of generative biology.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="mission-crew" class="content-section">
-                    <div class="content-box">
-                        <h2>MISSION CREW</h2>
-                        <div data-view="moon" class="active-view">
-                             <p>A manifest of key collaborators, mentors, and partners on the creative frontier.</p>
-                            <div class="project-grid">
-                                <div class="project-card">
-                                    <h3>[Crew Member Name]</h3> <p class="role">Co-Founder, Tangency</p>
-                                    <p>A key partner in establishing our nonprofit. Their strategic vision was instrumental in transforming an idea into a community-driven reality.</p>
-                                </div>
-                                <div class="project-card">
-                                    <h3>[Crew Member Name]</h3> <p class="role">Lead Explorer, Off-Grid Ops</p>
-                                    <p>The primary navigator and logistical expert for numerous expeditions. Their expertise in the field has been invaluable to documenting remote locations.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-view="mars">
-                             <p>A manifest of key collaborators, mentors, and partners in research and academia.</p>
-                             <div class="project-grid">
-                                 <div class="project-card">
-                                     <h3>[Mentor's Name]</h3> <p class="role">Principal Investigator, Bio-Stats Lab</p>
-                                     <p>Provided critical guidance and mentorship during the development of the Hemoglobin PMF models, fostering a deeper understanding of statistical mechanics.</p>
-                                 </div>
-                                 <div class="project-card">
-                                     <h3>[Collaborator's Name]</h3> <p class="role">Research Partner, Wetware Policy Project</p>
-                                     <p>A brilliant co-author whose insights into policy and ethics were fundamental to shaping our roadmap for future wetware systems.</p>
-                                 </div>
-                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="mission-logs" class="content-section">
-                    <div class="content-box">
-                        <h2>MISSION LOGS</h2>
-                        <p>A collection of project logs, research publications, and field notes from various missions.</p>
-                        <div class="project-grid">
-                            <div class="project-card" data-view="moon">
-                                <h3>Let's Code (SwiftSafari Blog)</h3>
-                                <p>I've written extensively on foundational Swift topics, building up to follow-along projects applying these principles in the development of various data science algorithms from scratch.</p>
-                                <a href="https://rivir.medium.com" target="_blank" class="link-style">Read Blog</a>
-                            </div>
-                            <div class="project-card" data-view="moon">
-                                <h3>Tangency</h3>
-                                <p>Established in 2016 with friends to support activism. We offer grants, scholarships, our podcast (on hiatus), and no-cost advocacy consultations.</p>
-                                <a href="#" target="_blank" class="link-style">Learn More</a>
-                            </div>
-                            <div class="project-card" data-view="moon">
-                                <h3>Travel Logs</h3>
-                                <p>Dispatches and photos from off-grid adventures and explorations.</p>
-                                <a href="https://instagram.com/rainingallweek" target="_blank" class="link-style">View Gallery</a>
-                            </div>
-
-                            <div class="project-card" data-view="mars">
-                                <h3>Lucid Diffuser</h3>
-                                <p>A microcontroller-based diffuser with programmable scent release cycles. The goal is to develop a sleep training device utilizing an olfaction-based operant conditioning paradigm for improved sleep consistency.</p>
-                                <a href="https://hackaday.io/project/196328-lucid-diffuser" target="_blank" class="link-style">Read on Hackaday</a>
-                            </div>
-                            <div class="project-card" data-view="mars">
-                                <h3>Hemoglobin PMF Models</h3>
-                                <p>Derived PMFs using binomial (independent) and Adair (cooperative) models, validated against literature. This lays groundwork for precise analysis of oxygen delivery in microcirculation.</p>
-                                <a href="https://rivirside.github.io/Hb-Saturation/" target="_blank" class="link-style">Try Simulator</a>
-                            </div>
-                             <div class="project-card" data-view="mars">
-                                <h3>Biostats Simulator</h3>
-                                <p>An interactive educational tool for medical students to clarify trade-offs in test design by computing metrics like PPV, NPV, and F1-score across variable inputs.</p>
-                                <a href="https://rivirside.github.io/Biostats/" target="_blank" class="link-style">Try Simulator</a>
-                            </div>
-                            <div class="project-card" data-view="mars">
-                                <h3>Speciation Analysis</h3>
-                                <p>An in-development study of factors driving parametric speciation between humans on Earth and Mars.</p>
-                                <a href="#" target="_blank" class="link-style">Details TBA</a>
-                            </div>
-                            <div class="project-card" data-view="mars">
-                                <h3>Wetware Policy Project</h3>
-                                <p>A policy research paper addressing regulation needs for wetware intelligence systems, developed during a program at the University of California - Irvine.</p>
-                                <a href="#" target="_blank" class="link-style">Read PDF</a>
-                            </div>
-                            <div class="project-card" data-view="mars">
-                                <h3>Research Radar</h3>
-                                <p>Educational videos explaining popular research papers, sponsored by the Research Hub Foundation, a nonprofit decentralized science organization.</p>
-                                <a href="#" target="_blank" class="link-style">Watch Videos</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="contact" class="content-section">
-                     <div class="content-box">
-                         <h2>Contact & Socials</h2>
-                         <div class="project-grid">
-                            <a href="mailto:Personal@rivir.social" class="project-card" data-view="moon"><h3>Personal Email</h3></a>
-                            <a href="https://rivir.medium.com" target="_blank" class="project-card" data-view="moon"><h3>Medium</h3></a>
-                            <a href="https://instagram.com/rainingallweek" target="_blank" class="project-card" data-view="moon"><h3>Instagram</h3></a>
-                            <a href="https://x.com/rivirside" target="_blank" class="project-card" data-view="moon"><h3>Twitter (Social)</h3></a>
-                            <a href="https://www.goodreads.com/user/show/179178890-tomer-zilbershtein" target="_blank" class="project-card" data-view="moon"><h3>Goodreads</h3></a>
-                            <a href="https://github.com/rivirside" target="_blank" class="project-card" data-view="moon"><h3>GitHub</h3></a>
-                            
-                            <a href="mailto:tomer@arizona.edu" class="project-card" data-view="mars"><h3>Academic Email</h3></a>
-                            <a href="https://www.linkedin.com/in/tomerzil/" target="_blank" class="project-card" data-view="mars"><h3>LinkedIn</h3></a>
-                            <a href="https://x.com/martianrain" target="_blank" class="project-card" data-view="mars"><h3>Twitter (Academic)</h3></a>
-                            <a href="https://www.researchhub.com/author/975946" target="_blank" class="project-card" data-view="mars"><h3>ResearchHub</h3></a>
-                            <a href="https://www.researchgate.net/profile/Tomer-Zilbershtein" target="_blank" class="project-card" data-view="mars"><h3>ResearchGate</h3></a>
-                            <a href="https://orcid.org/0000-0002-1059-4848" target="_blank" class="project-card" data-view="mars"><h3>ORCID</h3></a>
-                            <a href="https://github.com/rivirside" target="_blank" class="project-card" data-view="mars"><h3>GitHub</h3></a>
-                            <a href="https://hackaday.io/rivir" target="_blank" class="project-card" data-view="mars"><h3>Hackaday</h3></a>
-                         </div>
-                    </div>
-                </section>
-
-                <footer><p>&copy; 2025 Tomer Rivir Yonatan. All stars aligned.</p></footer>
-            </main>
         </div>
     </div>
-
-    <div id="game-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 100; justify-content: center; align-items: center;">
-        <div style="position: relative; background-color: #0b0c10; border: 2px solid var(--toggle-border); border-radius: 15px; width: 90%; max-width: 960px; height: 80%; padding: 1rem; box-shadow: 0 0 30px var(--glow-color);">
-            <button id="close-modal-btn" style="position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; border-radius: 50%; background-color: var(--toggle-border); color: var(--dark-space); border: none; font-weight: bold; cursor: pointer; z-index: 110;">X</button>
-            <iframe id="game-frame" src="" style="width: 100%; height: 100%; border: none; border-radius: 10px;"></iframe>
-        </div>
-    </div>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -614,7 +885,8 @@
             const introHeader = document.getElementById('intro-header');
             const viewToggle = document.getElementById('view-toggle');
             const coronalLoopsContainer = document.getElementById('coronal-loops-container');
-            const contentWrapper = document.querySelector('.content-wrapper');
+            const navButton = document.querySelector('.nav-button');
+            const satellite = document.getElementById('satellite');
             
             // --- Star Generation ---
             const starContainer = document.getElementById('animation-container');
@@ -623,7 +895,7 @@
                 star.className = 'star';
                 const size = Math.random() * 2 + 1;
                 star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 400}vh`; // Adjusted for new content height
+                star.style.top = `${Math.random() * 400}vh`;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
                 star.style.animationDelay = `${Math.random() * 5}s`;
@@ -633,7 +905,7 @@
 
             // --- Asteroid Belt Generation ---
             const beltContainer = document.getElementById('asteroid-belt-container');
-            for (let i=0; i < 150; i++) {
+            for (let i = 0; i < 150; i++) {
                 const asteroid = document.createElement('div');
                 asteroid.className = 'asteroid';
                 const size = Math.random() * 8 + 2;
@@ -672,6 +944,64 @@
                 loopsContainer.appendChild(loop);
             }
 
+            // --- Modal Elements ---
+            const gameModal = document.getElementById('game-modal');
+            const gameFrame = document.getElementById('game-frame');
+            const closeBtn = document.querySelector('.close-btn');
+            
+            // --- Satellite Interaction ---
+            satellite.addEventListener('click', function() {
+                // Create signal burst animation
+                for (let i = 0; i < 3; i++) {
+                    const signal = document.createElement('div');
+                    signal.className = 'satellite-signal';
+                    signal.style.animationDelay = `${i * 0.3}s`;
+                    this.querySelector('.satellite-body').appendChild(signal);
+                    signal.addEventListener('animationend', () => signal.remove());
+                }
+                
+                // Open the game modal
+                setTimeout(() => {
+                    gameModal.style.display = 'block';
+                    gameFrame.src = 'Asteroid Destroyer/index.html';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }, 500);
+            });
+            
+            // Close modal when clicking the X
+            closeBtn.addEventListener('click', function() {
+                gameModal.style.display = 'none';
+                gameFrame.src = ''; // Clear the iframe
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+            
+            // Close modal when clicking outside of it
+            gameModal.addEventListener('click', function(e) {
+                if (e.target === gameModal) {
+                    gameModal.style.display = 'none';
+                    gameFrame.src = ''; // Clear the iframe
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+            
+            // ESC key to close modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && gameModal.style.display === 'block') {
+                    gameModal.style.display = 'none';
+                    gameFrame.src = '';
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Add hover effect for satellite
+            satellite.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+            });
+            
+            satellite.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+            });
+            
             // --- Solar Flare Interaction ---
             sun.addEventListener('click', function(e) {
                 const rect = sun.getBoundingClientRect();
@@ -700,8 +1030,9 @@
                 const introOpacity = 1 - Math.min(1, Math.max(0, scrollProgress / introFadeEnd));
                 introHeader.style.opacity = introOpacity;
                 viewToggle.style.opacity = introOpacity;
+                navButton.style.opacity = introOpacity;
 
-                const initialSunContainerY = 75;
+                const initialSunContainerY = 74;  // Reduced from 75 to move sun 1% higher
                 const currentSunContainerY = initialSunContainerY - (initialSunContainerY * scrollProgress);
                 sunContainer.style.transform = `translateY(${currentSunContainerY}vh)`;
                 sunContainer.style.position = 'sticky';
@@ -714,9 +1045,6 @@
                 document.getElementById('sun-corona').style.transform = `translateZ(-200px) scale(${currentSunScale * 1.1})`;
                 coronalLoopsContainer.style.transform = `translateZ(-150px) scale(${currentSunScale})`;
 
-                const contentFadeStart = 0.5;
-                const contentOpacity = Math.min(1, Math.max(0, (scrollProgress - contentFadeStart) / (1 - contentFadeStart)));
-                contentWrapper.style.opacity = contentOpacity;
                 
                 animationFrameId = null;
             }
@@ -727,63 +1055,238 @@
                 }
             });
 
-            // --- View Toggle Logic ---
-            const toggleButtons = viewToggle.querySelectorAll('.toggle-btn');
+            // --- Planet Info Cards ---
+            const planetData = {
+                'orbit-mercury': {
+                    name: 'Mercury',
+                    type: 'Terrestrial Planet',
+                    distance: '57.9 million km',
+                    diameter: '4,879 km',
+                    year: '88 Earth days',
+                    temp: '-173°C to 427°C',
+                    fact: 'Closest planet to the Sun'
+                },
+                'orbit-venus': {
+                    name: 'Venus',
+                    type: 'Terrestrial Planet',
+                    distance: '108.2 million km',
+                    diameter: '12,104 km',
+                    year: '225 Earth days',
+                    temp: '462°C average',
+                    fact: 'Hottest planet in our solar system'
+                },
+                'orbit-earth': {
+                    name: 'Earth',
+                    type: 'Terrestrial Planet',
+                    distance: '149.6 million km',
+                    diameter: '12,742 km',
+                    year: '365.25 days',
+                    temp: '15°C average',
+                    fact: 'Only known planet with life'
+                },
+                'orbit-mars': {
+                    name: 'Mars',
+                    type: 'Terrestrial Planet',
+                    distance: '227.9 million km',
+                    diameter: '6,779 km',
+                    year: '687 Earth days',
+                    temp: '-65°C average',
+                    fact: 'Has the largest volcano in the solar system'
+                },
+                'orbit-jupiter': {
+                    name: 'Jupiter',
+                    type: 'Gas Giant',
+                    distance: '778.5 million km',
+                    diameter: '139,820 km',
+                    year: '11.9 Earth years',
+                    moons: '80+ moons',
+                    fact: 'Has a storm larger than Earth'
+                },
+                'orbit-saturn': {
+                    name: 'Saturn',
+                    type: 'Gas Giant',
+                    distance: '1.43 billion km',
+                    diameter: '116,460 km',
+                    year: '29.5 Earth years',
+                    rings: 'Made of ice and rock',
+                    fact: 'Less dense than water'
+                },
+                'orbit-uranus': {
+                    name: 'Uranus',
+                    type: 'Ice Giant',
+                    distance: '2.87 billion km',
+                    diameter: '50,724 km',
+                    year: '84 Earth years',
+                    tilt: '98° axial tilt',
+                    fact: 'Rotates on its side'
+                },
+                'orbit-neptune': {
+                    name: 'Neptune',
+                    type: 'Ice Giant',
+                    distance: '4.5 billion km',
+                    diameter: '49,244 km',
+                    year: '165 Earth years',
+                    winds: 'Up to 1,200 mph',
+                    fact: 'Windiest planet in the solar system'
+                }
+            };
+
+            // Create info card element
+            const infoCard = document.createElement('div');
+            infoCard.className = 'planet-info';
+            document.body.appendChild(infoCard);
+
+            // Add hover events to planets
+            document.querySelectorAll('.orbiting-planet').forEach(planet => {
+                // Create orbital ring for each planet
+                const ring = document.createElement('div');
+                ring.className = 'orbital-ring';
+                const planetSize = parseInt(window.getComputedStyle(planet).width);
+                const ringSize = planetSize * 3;
+                ring.style.width = ringSize + 'px';
+                ring.style.height = ringSize + 'px';
+                ring.style.left = -(ringSize - planetSize) / 2 + 'px';
+                ring.style.top = -(ringSize - planetSize) / 2 + 'px';
+                planet.appendChild(ring);
+
+                // Create particles for hover effect
+                planet.addEventListener('mouseenter', function(e) {
+                    // Create particle effect
+                    for (let i = 0; i < 8; i++) {
+                        const particle = document.createElement('div');
+                        particle.style.cssText = `
+                            position: absolute;
+                            width: 4px;
+                            height: 4px;
+                            background: white;
+                            border-radius: 50%;
+                            left: 50%;
+                            top: 50%;
+                            pointer-events: none;
+                            opacity: 0.8;
+                        `;
+                        this.appendChild(particle);
+                        
+                        const angle = (i * 45) * Math.PI / 180;
+                        const distance = planetSize * 0.8;
+                        
+                        particle.animate([
+                            { 
+                                transform: 'translate(-50%, -50%)',
+                                opacity: 0.8
+                            },
+                            { 
+                                transform: `translate(calc(-50% + ${Math.cos(angle) * distance}px), calc(-50% + ${Math.sin(angle) * distance}px))`,
+                                opacity: 0
+                            }
+                        ], {
+                            duration: 1000,
+                            easing: 'ease-out'
+                        }).onfinish = () => particle.remove();
+                    }
+
+                    const data = planetData[this.id];
+                    if (!data) return;
+
+                    let statsHTML = '';
+                    if (data.distance) statsHTML += `<div class="stat"><span>Distance from Sun:</span><span>${data.distance}</span></div>`;
+                    if (data.diameter) statsHTML += `<div class="stat"><span>Diameter:</span><span>${data.diameter}</span></div>`;
+                    if (data.year) statsHTML += `<div class="stat"><span>Year Length:</span><span>${data.year}</span></div>`;
+                    if (data.temp) statsHTML += `<div class="stat"><span>Temperature:</span><span>${data.temp}</span></div>`;
+                    if (data.moons) statsHTML += `<div class="stat"><span>Moons:</span><span>${data.moons}</span></div>`;
+                    if (data.rings) statsHTML += `<div class="stat"><span>Rings:</span><span>${data.rings}</span></div>`;
+                    if (data.tilt) statsHTML += `<div class="stat"><span>Axial Tilt:</span><span>${data.tilt}</span></div>`;
+                    if (data.winds) statsHTML += `<div class="stat"><span>Wind Speed:</span><span>${data.winds}</span></div>`;
+
+                    infoCard.innerHTML = `
+                        <h3>${data.name}</h3>
+                        <p><em>${data.type}</em></p>
+                        ${statsHTML}
+                        <p style="margin-top: 0.5rem; font-style: italic; color: var(--accent-color);">${data.fact}</p>
+                    `;
+
+                    const rect = this.getBoundingClientRect();
+                    const cardWidth = 250;
+                    let left = rect.left + rect.width + 20;
+                    let top = rect.top;
+
+                    // Adjust position if card would go off screen
+                    if (left + cardWidth > window.innerWidth) {
+                        left = rect.left - cardWidth - 20;
+                    }
+                    if (top + 200 > window.innerHeight) {
+                        top = window.innerHeight - 220;
+                    }
+
+                    infoCard.style.left = left + 'px';
+                    infoCard.style.top = top + 'px';
+                    infoCard.classList.add('show');
+                });
+
+                planet.addEventListener('mouseleave', function() {
+                    infoCard.classList.remove('show');
+                });
+            });
+
+            // --- Cursor Trail Effect ---
+            let cursorTrails = [];
+            const maxTrails = 5;
             
-            function setView(viewName) {
-                toggleButtons.forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.target === viewName);
+            // Create cursor trail elements
+            for (let i = 0; i < maxTrails; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                trail.style.background = `radial-gradient(circle, rgba(255,255,255,${0.3 - i * 0.05}), transparent)`;
+                document.body.appendChild(trail);
+                cursorTrails.push(trail);
+            }
+            
+            let mouseX = 0, mouseY = 0;
+            let trailX = [], trailY = [];
+            for (let i = 0; i < maxTrails; i++) {
+                trailX[i] = 0;
+                trailY[i] = 0;
+            }
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            function animateCursorTrail() {
+                // Update first trail to mouse position
+                trailX[0] += (mouseX - trailX[0]) * 0.3;
+                trailY[0] += (mouseY - trailY[0]) * 0.3;
+                
+                cursorTrails[0].style.left = trailX[0] - 10 + 'px';
+                cursorTrails[0].style.top = trailY[0] - 10 + 'px';
+                
+                // Update other trails to follow previous trail
+                for (let i = 1; i < maxTrails; i++) {
+                    trailX[i] += (trailX[i - 1] - trailX[i]) * 0.3;
+                    trailY[i] += (trailY[i - 1] - trailY[i]) * 0.3;
+                    
+                    cursorTrails[i].style.left = trailX[i] - 10 + 'px';
+                    cursorTrails[i].style.top = trailY[i] - 10 + 'px';
+                }
+                
+                requestAnimationFrame(animateCursorTrail);
+            }
+            
+            // Show trails when hovering over planets
+            document.querySelectorAll('.orbiting-planet').forEach(planet => {
+                planet.addEventListener('mouseenter', () => {
+                    cursorTrails.forEach(trail => trail.style.opacity = '1');
                 });
                 
-                document.querySelectorAll('[data-view]').forEach(view => {
-                    const el = view;
-                    const parentSectionId = el.closest('section')?.id;
-                    const parentCard = el.closest('.project-card');
-
-                    if (parentCard) { // This handles cards in #mission-logs and #contact
-                        el.style.display = 'none';
-                        if (el.dataset.view === viewName) {
-                           el.style.display = 'block';
-                        }
-                    } else if (parentSectionId === 'mission-briefing' || parentSectionId === 'mission-crew') {
-                       // This handles the text content in briefing and crew sections
-                       el.classList.toggle('active-view', el.dataset.view === viewName);
-                    }
+                planet.addEventListener('mouseleave', () => {
+                    cursorTrails.forEach(trail => trail.style.opacity = '0');
                 });
-            }
-
-            viewToggle.addEventListener('click', (e) => {
-                const targetButton = e.target.closest('.toggle-btn');
-                if (targetButton && !targetButton.classList.contains('active')) {
-                    setView(targetButton.dataset.target);
-                }
             });
-
-            // --- Modal and Easter Egg Logic ---
-            const gameModal = document.getElementById('game-modal');
-            const gameFrame = document.getElementById('game-frame');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-            const spaceStation = document.getElementById('space-station'); 
-
-            spaceStation.addEventListener('click', () => {
-                gameFrame.src = './Asteroid Destroyer/index.html';
-                gameModal.style.display = 'flex';
-            });
-
-            closeModalBtn.addEventListener('click', () => {
-                gameModal.style.display = 'none';
-                gameFrame.src = ''; 
-            });
-
-            gameModal.addEventListener('click', (e) => {
-                if (e.target === gameModal) {
-                    gameModal.style.display = 'none';
-                    gameFrame.src = '';
-                }
-            });
+            
+            animateCursorTrail();
 
             // --- Initial Setup ---
-            setView('moon');
             updateScrollAnimation();  
         });
     </script>
