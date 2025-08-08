@@ -76,15 +76,17 @@ altsite2/
     ├── professional/          # Professional section
     │   ├── profile.md
     │   ├── experiences.md
-    │   └── experiences/      # Work experiences
-    │       ├── uphs-ma.md
-    │       ├── patient-registrar.md
-    │       ├── rosenbloom-lab.md
-    │       ├── census-bureau.md
-    │       ├── penny-finance.md
-    │       ├── shipwise.md
-    │       ├── sanaby-health.md
-    │       └── japour-enterprises.md
+    │   ├── experiences/      # Work experiences
+    │   │   ├── uphs-ma.md
+    │   │   ├── patient-registrar.md
+    │   │   ├── rosenbloom-lab.md
+    │   │   ├── census-bureau.md
+    │   │   ├── penny-finance.md
+    │   │   ├── shipwise.md
+    │   │   ├── sanaby-health.md
+    │   │   └── japour-enterprises.md
+    │   └── military-service/  # Military service
+    │       └── mdssp.md
     │
     ├── service/               # Service and volunteering section
     │   ├── profile.md

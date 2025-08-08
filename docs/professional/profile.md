@@ -22,6 +22,9 @@
 ### Business/Finance
 [Years and summary]
 
+### Military Service
+[Years and summary]
+
 ## Leadership Philosophy
 
 [Describe leadership approach]

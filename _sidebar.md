@@ -45,6 +45,8 @@
     * [ShipWise](docs/professional/experiences/shipwise.md)
     * [Sanaby Health SPAC](docs/professional/experiences/sanaby-health.md)
     * [Japour Enterprises](docs/professional/experiences/japour-enterprises.md)
+  * **Military Service**
+    * [MDSSP - Army Reserves](docs/professional/military-service/mdssp.md)
 
 * **Service Section**
   * [Profile](docs/service/profile.md)
