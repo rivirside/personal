@@ -10,6 +10,7 @@
   * **Experiences**
     * [Hanson Lab Summer Research](docs/academic/experiences/hanson-lab.md)
     * [iTolerance Biomedical Engineering Internship](docs/academic/experiences/itolerance.md)
+    * [Science Advocacy at UC Irvine](docs/academic/experiences/science-advocacy-uci.md)
   * **Projects**
     * [Hemoglobin PMF](docs/academic/projects/hemoglobin-pmf.md)
     * [Human Speciation Study](docs/academic/projects/human-speciation.md)
