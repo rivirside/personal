@@ -26,12 +26,13 @@
 * **Operational Section**
   * [Profile](docs/operational/profile.md)
   * **Skills**
+    * [Medical](docs/operational/skills/medical.md)
+    * [Search and Rescue](docs/operational/skills/search-rescue.md)
     * [Coding](docs/operational/skills/coding.md)
     * [Diving](docs/operational/skills/diving.md)
     * [Radio](docs/operational/skills/radio.md)
     * [Flying](docs/operational/skills/flying.md)
     * [Technical Ropework](docs/operational/skills/ropework.md)
-    * [Search and Rescue](docs/operational/skills/search-rescue.md)
 
 * **Professional Section**
   * [Profile](docs/professional/profile.md)

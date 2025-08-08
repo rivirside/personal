@@ -65,12 +65,13 @@ altsite2/
     ├── operational/           # Operational section
     │   ├── profile.md
     │   └── skills/           # Technical/field skills
+    │       ├── medical.md
+    │       ├── search-rescue.md
     │       ├── coding.md
     │       ├── diving.md
     │       ├── radio.md
     │       ├── flying.md
-    │       ├── ropework.md
-    │       └── search-rescue.md
+    │       └── ropework.md
     │
     ├── professional/          # Professional section
     │   ├── profile.md
