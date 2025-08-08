@@ -1,4 +1,5 @@
 * [Introduction](docs/introduction.md)
+* [Contact](docs/contact.md)
 
 * **Academic Section**
   * [Profile](docs/academic/profile.md)
@@ -6,6 +7,7 @@
     * [MAST Academy](docs/academic/institutions/mast-academy.md)
     * [University of Florida](docs/academic/institutions/university-of-florida.md)
     * [Thomas Jefferson University](docs/academic/institutions/thomas-jefferson.md)
+    * [Community College of Philadelphia](docs/academic/institutions/community-college-philadelphia.md)
     * [University of Arizona College of Medicine](docs/academic/institutions/ua-medicine.md)
   * **Experiences**
     * [Hanson Lab Summer Research](docs/academic/experiences/hanson-lab.md)
@@ -22,6 +24,7 @@
 * **Operational Section**
   * [Profile](docs/operational/profile.md)
   * **Skills**
+    * [Coding](docs/operational/skills/coding.md)
     * [Diving](docs/operational/skills/diving.md)
     * [Radio](docs/operational/skills/radio.md)
     * [Flying](docs/operational/skills/flying.md)
@@ -31,10 +34,12 @@
 * **Professional Section**
   * [Profile](docs/professional/profile.md)
   * [Experiences](docs/professional/experiences.md)
+    * [Medical Assistant at Penn Medicine](docs/professional/experiences/uphs-ma.md)
+    * [Lab Tech at Rosenbloom Center](docs/professional/experiences/rosenbloom-lab.md)
+    * [Penny Finance](docs/professional/experiences/penny-finance.md)
+    * [ShipWise](docs/professional/experiences/shipwise.md)
     * [Sanaby Health SPAC](docs/professional/experiences/sanaby-health.md)
     * [Japour Enterprises](docs/professional/experiences/japour-enterprises.md)
-    * [Lab Tech at Rosenbloom Center](docs/professional/experiences/rosenbloom-lab.md)
-    * [Medical Assistant at UPHS](docs/professional/experiences/uphs-ma.md)
 
 * **Creative Section**
   * [Profile](docs/creative/profile.md)

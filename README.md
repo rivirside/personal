@@ -29,8 +29,16 @@ altsite2/
 ├── Asteroid Destroyer/         # Minigame (activated by clicking satellite)
 │   └── index.html             # Game entry point
 │
+├── files/                      # Static files (PDFs, images, documents)
+│   ├── README.md              # Files directory documentation
+│   ├── pdfs/                  # PDF documents (CV, papers, certificates)
+│   ├── images/                # Images for content pages
+│   ├── diagrams/              # Technical diagrams and flowcharts
+│   └── downloads/             # Downloadable resources
+│
 └── docs/                      # All documentation content in markdown
     ├── introduction.md        # Welcome/intro page
+    ├── contact.md             # Contact information and social media links
     │
     ├── academic/              # Academic section
     │   ├── profile.md
@@ -38,6 +46,7 @@ altsite2/
     │   │   ├── mast-academy.md
     │   │   ├── university-of-florida.md
     │   │   ├── thomas-jefferson.md
+    │   │   ├── community-college-philadelphia.md
     │   │   └── ua-medicine.md
     │   ├── experiences/       # Academic experiences
     │   │   ├── hanson-lab.md
@@ -54,6 +63,7 @@ altsite2/
     ├── operational/           # Operational section
     │   ├── profile.md
     │   └── skills/           # Technical/field skills
+    │       ├── coding.md
     │       ├── diving.md
     │       ├── radio.md
     │       ├── flying.md
@@ -107,6 +117,15 @@ altsite2/
 1. Create markdown file in appropriate `docs/` subdirectory
 2. Add link to `_sidebar.md`
 3. Follow existing markdown format
+
+### To add files (PDFs, images):
+1. Place files in appropriate `files/` subdirectory:
+   - PDFs → `files/pdfs/`
+   - Images → `files/images/`
+   - Diagrams → `files/diagrams/`
+   - Downloads → `files/downloads/`
+2. Reference in markdown: `[Link Text](files/pdfs/document.pdf)`
+3. For images: `![Alt Text](files/images/image.png)`
 
 ### To modify the solar system animation:
 - Planet data and info cards: lines 1041-1114 in `index.html`
