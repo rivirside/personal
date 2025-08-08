@@ -2,7 +2,7 @@
 
 ## Institution
 
-Rosenbloom Center for Fibrotic Disease Research
+Rosenbloom Fibrotic Disease Research Center
 Thomas Jefferson University, Philadelphia, PA
 
 ## Position
@@ -15,16 +15,15 @@ November 2021 - June 2023
 
 ## Research Focus
 
-Investigating the molecular mechanisms of fibrogenesis and myofibroblast activation in fibrotic diseases
+Working with fibroblast cultures, mouse models, and human patients to investigate the mechanisms underlying myofibroblast activation
 
 ## Primary Responsibilities
 
-### Data Management & Analysis
-- Engaged in comprehensive data management from acquisition to analysis
-- Working with mice and mammalian cell culture for data acquisition
-- Processing images using ImageJ software
-- Preparing detailed project reports for supervisors
-- Meticulous documentation using LabArchives and physical records
+### Laboratory Techniques & Analysis
+- Routinely prepare tissues and cultures for staining and biochemical assays
+- Regularly employ phase, fluorescence, and confocal microscopy to capture images for quantification with ImageJ software
+- Maintain a lab journal with notes and progress for each project
+- Report during meetings, making palpable contributions to troubleshooting discussions
 
 ### Laboratory Operations
 - Maintained lab organization and sterile work environment
@@ -43,17 +42,19 @@ Investigating the molecular mechanisms of fibrogenesis and myofibroblast activat
 - Protein quantification assays
 
 ### Cell Culture
-- Mammalian cell culture maintenance and expansion
+- Fibroblast culture maintenance and expansion
+- Working with mammalian cell cultures
 - 3D cell culture techniques
-- Primary fibroblast isolation and culture
-- Cell differentiation protocols
+- Primary fibroblast isolation from tissues
+- Cell differentiation protocols for myofibroblast studies
 - Aseptic technique and sterile handling
 
 ### Microscopy & Imaging
-- Fluorescence microscopy
-- Confocal microscopy
+- Phase microscopy for live cell imaging
+- Fluorescence microscopy for protein localization
+- Confocal microscopy for detailed imaging
 - Immunohistochemical staining methods
-- Image acquisition and analysis using ImageJ
+- Image acquisition and quantification using ImageJ
 - Multi-channel fluorescence imaging
 
 ### Biochemical Assays
@@ -63,10 +64,11 @@ Investigating the molecular mechanisms of fibrogenesis and myofibroblast activat
 - Enzymatic activity measurements
 
 ### Animal Work
-- Rodent care and management
+- Working with mouse models of fibrotic disease
 - Tissue collection and processing
 - Compliance with IACUC protocols
 - Animal model maintenance
+- Preparing tissues for analysis
 
 ## Research Projects
 

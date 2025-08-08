@@ -2,7 +2,7 @@
 
 ## Organization Overview
 
-GET Included Cafe is a Philadelphia-based nonprofit organization that creates meaningful employment opportunities for adults with intellectual and developmental disabilities (IDD). Operating as a fully functioning cafe, it serves as both a community gathering space and a transformative workplace where individuals with disabilities can develop professional skills, build confidence, and achieve economic independence.
+GET Included Cafe is a Philadelphia-based nonprofit organization that serves the neurodivergent community, particularly families with children with disabilities. While the organization operates a cafe that provides employment opportunities for adults with disabilities, it also hosts critical respite events and support programs for families navigating the challenges of raising children with special needs.
 
 ## Duration
 
@@ -10,42 +10,55 @@ GET Included Cafe is a Philadelphia-based nonprofit organization that creates me
 
 ## Role & Responsibilities
 
-### Direct Support
-- Worked alongside employees with IDD as a job coach and mentor
-- Provided guidance on customer service skills and cash register operations
-- Supported employees in learning new tasks at their own pace
-- Celebrated successes and provided encouragement during challenges
-- Helped create an inclusive, supportive work environment
+### Respite Event Organization & Support
+- Helped organize and run volunteer events providing respite care for families
+- Provided one-on-one care and attention to neurodivergent children during events
+- Created and facilitated fun, engaging activities appropriate for various abilities
+- Ensured safety and support for children with diverse needs
+- Allowed parents critical time for self-care or handling important matters
 
-### Cafe Operations
-- Assisted with daily cafe operations during busy periods
-- Helped train new employees on food preparation and safety
-- Supported inventory management and supply organization
-- Participated in customer engagement and community outreach
-- Contributed to maintaining a welcoming atmosphere for all patrons
+### Direct Child Care
+- Supervised children with disabilities during respite events
+- Managed behavioral challenges and emotional needs
+- Facilitated inclusive play and social interaction
+- Provided individualized attention based on each child's needs
+- Communicated with parents about their child's experience during events
 
-### Program Development
-- Provided feedback on training protocols and accommodations
-- Helped develop visual aids and step-by-step guides for complex tasks
-- Participated in team meetings to discuss employee progress
-- Assisted in creating individualized support strategies
+### Fundraising Support
+- Assisted with organizing the annual fundraising gala
+- Helped coordinate fundraising events throughout the year
+- Supported donor engagement and community outreach
+- Shared the organization's mission and impact with potential supporters
+- Contributed to event planning and execution
+
+### Family Support
+- Recognized that many families had limited childcare resources
+- Understood respite events as critical support for overwhelmed parents
+- Built trust with families who rarely had reliable care options
+- Provided not just childcare but peace of mind for parents
+- Connected families with additional resources when possible
 
 ## Population Served
 
-GET Included Cafe employs adults with various intellectual and developmental disabilities including:
-- Autism spectrum disorder
-- Down syndrome
-- Intellectual disabilities
-- Developmental delays
-- Learning disabilities
+Through the respite events, GET Included Cafe serves:
+- Neurodivergent children, primarily those with disabilities
+- Children with autism spectrum disorder
+- Children with intellectual and developmental disabilities
+- Children with physical disabilities
+- Children with complex medical needs
+- Families with limited financial resources
+- Families without access to specialized childcare
+- Parents managing multiple children with special needs
 
-These remarkable individuals bring unique perspectives, incredible dedication, and infectious enthusiasm to their work. Many had been told they'd never be able to hold a job, yet here they were proving everyone wrong, serving customers with pride and professionalism.
+Many of these families faced significant challenges in finding appropriate childcare, making our respite events not just helpful but essential for their wellbeing and ability to manage critical life tasks.
 
 ## Memorable Experiences
 
-Every shift at GET Included brought moments of joy and inspiration. I watched employees who initially struggled with social anxiety become confident baristas, greeting regular customers by name and recommending their favorite drinks. One employee, who had been told he'd never work independently, became our best sandwich maker - his attention to detail was unmatched.
+The respite events revealed the profound impact of providing families with even a few hours of support. I remember one single mother who broke down in tears when dropping off her son - it was the first time in months she could run errands without worry. She used those precious hours to attend a job interview that she'd been postponing because she had no childcare.
 
-The transformation wasn't just in the employees - it was in the community too. Regular customers would specifically come during certain shifts to see their favorite baristas. Parents would bring their children to show them that disability doesn't define capability. The cafe became more than a business; it became a beacon of inclusion.
+During one event, I worked one-on-one with a child who was initially completely withdrawn. Through patient engagement with sensory activities, he gradually opened up, and by the end was laughing and playing with other children. His mother later told me it was the first time she'd seen him comfortable in a group setting.
+
+The annual fundraising gala was equally moving. Seeing the community come together - families we served alongside donors and supporters - demonstrated that inclusion isn't charity but community building. One major donor shared that watching the children play during a respite event convinced them to support the organization because they saw the immediate, tangible impact.
 
 ## Skills Developed
 
@@ -71,9 +84,9 @@ The transformation wasn't just in the employees - it was in the community too. R
 
 ## Impact on Medical Journey
 
-GET Included Cafe revolutionized my understanding of disability and capability. I learned that with the right support and opportunities, individuals with IDD can thrive in ways that surpass all expectations. This experience has made me committed to ensuring my future medical practice is fully accessible and inclusive.
+GET Included Cafe taught me about the broader ecosystem of care that families with disabled children navigate. The respite events weren't just about childcare - they were about recognizing that parent wellbeing directly affects child outcomes. Parents who are burned out, overwhelmed, and isolated cannot provide optimal care, no matter how much they love their children.
 
-I've seen firsthand how meaningful employment impacts health outcomes - employees showed improvements in self-esteem, social skills, physical health from active work, and mental health from having purpose and community. This holistic view of health extends far beyond traditional medical interventions.
+This experience showed me that healthcare extends beyond the clinic. Many families couldn't attend medical appointments because they had no one to watch their other children. Some parents delayed their own healthcare because they couldn't leave their disabled child. These respite events were, in many ways, preventive healthcare for entire families.
 
 ## Lessons Learned
 
@@ -119,8 +132,8 @@ The lessons from GET Included Cafe continue to influence my daily life:
 
 ## Reflection
 
-GET Included Cafe showed me that inclusion isn't charity - it's justice. The employees there aren't inspirational because they have disabilities; they're inspirational because they show up every day, work hard, and refuse to let others' limitations define them.
+GET Included Cafe showed me that supporting families with disabled children requires understanding their full context - not just the child's diagnosis but the family's resources, struggles, and needs. The respite events we organized weren't just nice extras; for many families, they were lifelines that allowed parents to work, attend to their own health, or simply rest.
 
-This experience taught me that as a physician, my role extends beyond treating medical conditions. It includes advocating for my patients' full participation in society, recognizing their complete humanity, and fighting for a world where everyone has the opportunity to contribute their unique gifts.
+The fundraising work taught me about sustainable support systems. It's not enough to provide services; we must build communities that understand and value inclusion. Seeing donors connect with families, understanding that their contributions provided tangible relief and support, showed me how healthcare and community support must work together.
 
-Every latte served, every sandwich made, every customer greeted with a smile was a small revolution against low expectations. Being part of that revolution has forever changed how I see disability, inclusion, and the role of healthcare in creating equitable communities.
+This experience reinforced that as a future physician, I must consider not just my patients but their caregivers. A child with disabilities affects the entire family's health and wellbeing. By supporting parents through respite, resources, and understanding, we improve outcomes for everyone. GET Included Cafe taught me that true healthcare is holistic, community-based, and recognizes that sometimes the best medicine is a few hours of rest for an exhausted parent.

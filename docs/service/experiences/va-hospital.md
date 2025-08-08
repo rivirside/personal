@@ -10,18 +10,12 @@ The Corporal Michael J. Crescenz VA Medical Center in Philadelphia serves as the
 
 ## Role & Responsibilities
 
-### Direct Patient Support
-- Provided companionship and emotional support to hospitalized veterans
-- Assisted with wayfinding and navigation through the medical center
-- Helped veterans and families understand appointment scheduling
-- Supported recreational therapy activities
-- Engaged in meaningful conversations with veterans about their service and experiences
-
-### Administrative Support
-- Assisted with patient check-in processes
-- Helped organize and distribute comfort items
-- Supported staff with non-clinical tasks to improve patient flow
-- Participated in special events and veteran recognition ceremonies
+### Emergency Department Volunteer
+- Interact directly with patients in the VA Emergency Department
+- Provide support and assistance to veterans during their ED visits
+- Observe and learn from the interactions between veteran patients and providers
+- Engage with both administration and clinical care team members
+- Support the ED team with various non-clinical tasks to improve patient experience
 
 ## Populations Served
 
@@ -32,11 +26,13 @@ The Corporal Michael J. Crescenz VA Medical Center in Philadelphia serves as the
 - Those facing mental health challenges including PTSD
 - Veterans experiencing homelessness or housing instability
 
-## Memorable Experiences
+## Understanding Patient-Provider Alignment
 
-Working at the VA has provided countless meaningful moments. I've had the privilege of listening to incredible stories of service and sacrifice, from WWII veterans sharing memories of D-Day to younger veterans processing their recent deployments. These conversations have taught me about resilience, the hidden wounds of war, and the importance of truly listening.
+One of the most profound observations from my time in the VA Emergency Department has been witnessing the unique dynamic when providers themselves are veterans. The shared experiences between veteran providers and patients creates a level of understanding that transcends typical clinical interactions. 
 
-One particular veteran taught me about the power of presence - sometimes just sitting quietly with someone who's struggling means more than any words could convey. Another showed me how humor can be a powerful coping mechanism, even in the face of serious illness.
+I've observed situations where patients, experiencing withdrawal symptoms, would yell at doctors and accuse them of malpractice for insisting on a full workup rather than simply treating the assumed withdrawal. The veteran providers respond with remarkable empathy and understanding - a reflection of the deep connection formed through shared military experience. This empathetic connection helps de-escalate tense situations and builds trust even in the most challenging encounters.
+
+Through conversations with multiple members of the ED care team, both administration and providers, I've learned that this connection is something they reflect on frequently. Many explicitly acknowledge how their own veteran status enhances their ability to connect with and care for veteran patients. They understand not just the medical symptoms but the underlying experiences that shape how veterans approach healthcare.
 
 ## Skills Developed
 
@@ -59,11 +55,15 @@ One particular veteran taught me about the power of presence - sometimes just si
 - Understanding of PTSD and trauma-informed care
 - Appreciation for unique challenges veterans face in healthcare
 
-## Impact on Medical Journey
+## Impact on Identity and Medical Journey
 
-This experience has fundamentally shaped my approach to medicine. Veterans taught me that healthcare extends far beyond treating disease - it's about honoring the whole person, their experiences, and their sacrifices. I've learned to recognize the signs of invisible wounds, the importance of building trust with patients who may be skeptical of systems, and the value of patience in care.
+This experience has validated my belief that shared identities between patients and providers can significantly impact healthcare delivery. When people suggest that my neurodivergent identity won't make a difference in my ability to care for patients with similar identities, I have concrete experience from the VA to validate that it can and does matter.
 
-The VA experience has also shown me the consequences of healthcare disparities and systemic challenges. Many veterans face barriers to care including transportation, mental health stigma, and complex bureaucracy. This has reinforced my commitment to becoming a physician who advocates for patients both in and outside the exam room.
+I'm not suggesting that providers without shared experiences cannot provide adequate care - they absolutely can. However, having shared experiences can greatly decrease obstacles to providing that care, reduce provider burnout in challenging cases, and most importantly, help patients feel safe and comfortable in approaching their care and trusting their life and wellness to their care team.
+
+Witnessing the power of patient-provider alignment at the VA has shown me that my own experiences and identities aren't liabilities to overcome but rather assets that can enhance the care I provide to certain populations. Just as veteran providers bring unique understanding to veteran care, I can bring understanding to neurodivergent patients who often face their own barriers in healthcare.
+
+Knowing the impact that I can have on patients - the trust I can build through shared understanding, the comfort I can provide through authentic connection, and the advocacy I can offer from lived experience - motivates me to pursue medicine. The VA has taught me that diversity in healthcare providers isn't just about representation; it's about ensuring every patient can find a provider who truly understands their journey.
 
 ## Lessons in Leadership & Service
 

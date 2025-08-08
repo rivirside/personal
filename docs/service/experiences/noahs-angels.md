@@ -2,7 +2,7 @@
 
 ## Organization Overview
 
-Noah's Angels is a Gainesville, Florida nonprofit organization dedicated to supporting children with disabilities and their families. The organization provides respite care, family support services, inclusive recreational activities, and community education to ensure that children with special needs and their families can thrive in an accepting, supportive environment.
+Noah's Angels is a Gainesville, Florida nonprofit organization that provides neurodivergent youth aged 4-12 with a safe space for guided play and engagement. The organization focuses on creating structured, supportive environments where children with various neurodevelopmental differences can develop social skills, emotional regulation, and communication abilities through therapeutic play.
 
 ## Duration
 
@@ -10,78 +10,93 @@ Noah's Angels is a Gainesville, Florida nonprofit organization dedicated to supp
 
 ## Role & Responsibilities
 
-### Direct Service with Children
-- Provided one-on-one support for children with various disabilities during activities
-- Assisted with adaptive recreational programs and inclusive play
-- Helped facilitate social interaction between children with and without disabilities
-- Supported children during community outings and special events
-- Created safe, engaging environments for children to explore and learn
+### Direct Supervision & Support
+- Worked directly with one or two children under my supervision during each session
+- Provided individualized attention tailored to each child's specific needs and abilities
+- Managed volatile emotions and behavioral challenges with patience and therapeutic techniques
+- Facilitated guided play activities designed to promote development and engagement
+- Created structured yet flexible environments responsive to children's changing needs
 
-### Family Support
-- Offered respite care allowing parents and caregivers time for self-care
-- Listened to families' experiences and challenges
-- Connected families with resources and support networks
-- Assisted during family events and support groups
-- Helped siblings understand and engage with their brothers/sisters with disabilities
+### Communication Facilitation
+- Enabled effective communication for children with speech disabilities
+- Used alternative communication methods including visual aids and gestures
+- Interpreted non-verbal cues and behaviors to understand children's needs
+- Encouraged peer interaction despite communication barriers
+- Celebrated communication breakthroughs, no matter how small
 
-### Program Activities
-- Supported inclusive summer camps and after-school programs
-- Assisted with therapeutic activities including art, music, and sensory play
-- Helped organize and run special events like holiday parties and family picnics
-- Participated in community awareness events and fundraisers
-- Contributed to creating adaptive materials and activity modifications
+### Parent Consultation
+- Met with parents following each session to provide detailed updates
+- Discussed both positive behaviors and areas of concern observed during sessions
+- Shared strategies that worked well for emotional regulation and engagement
+- Listened to parents' insights about their child's needs and home behaviors
+- Collaborated on consistent approaches between sessions and home
+
+### Emotional Regulation Support
+- Managed considerable emotional volatility common in this population
+- Implemented de-escalation techniques during meltdowns or crisis moments
+- Taught coping strategies appropriate for each child's developmental level
+- Recognized triggers and worked to prevent emotional dysregulation
+- Maintained calm presence during challenging behavioral episodes
 
 ## Population Served
 
-Noah's Angels serves children with a wide range of disabilities and their families:
+Noah's Angels specifically serves neurodivergent youth aged 4-12, including children with:
 - Autism spectrum disorder
-- Cerebral palsy
-- Down syndrome
-- Rare genetic conditions
-- Developmental delays
-- Medically complex conditions
+- ADHD
 - Sensory processing disorders
+- Speech and language delays
+- Developmental delays
+- Learning disabilities
+- Emotional regulation challenges
+- Communication disorders
 
-The families served come from diverse backgrounds, united by their journey of raising children with special needs and their desire for community, understanding, and support.
+These children often experience volatile emotions and face significant communication barriers, requiring specialized support to engage safely and meaningfully with their environment and peers.
 
 ## Memorable Experiences
 
-Working with Noah's Angels provided countless moments that reinforced why this work matters. I remember a child who was non-verbal teaching me an elaborate handshake that became our special greeting - communication transcends words. Another child, who struggled with sensory overload, found peace in our quiet reading corner, eventually trusting me enough to share his favorite books.
+Each session brought unique challenges and breakthroughs. I particularly remember working with a child who would have intense meltdowns whenever routines changed. Over weeks of patient work, we developed a visual schedule together, and eventually, he began to handle transitions with increasing grace. The day he navigated an unexpected change without a meltdown, his mother cried with relief and joy.
 
-The families taught me just as much as the children. Parents shared their advocacy battles for educational services, their joy in every small milestone, and their fears about the future. Siblings showed me what unconditional love looks like - fiercely protective and endlessly patient with their brothers and sisters.
+Another profound experience was with a child with severe speech delays. We spent months working on communication through pictures and gestures. When he finally said my name clearly for the first time, it felt like witnessing a miracle. His parents told me it was one of only a handful of words he could say clearly, and that he practiced it at home because he wanted to thank me.
 
-One family gathering stands out: watching typically developing children naturally include kids with disabilities in their games, with accommodations happening organically. It was inclusion at its finest - not forced or performative, just kids being kids together.
+The post-session parent meetings were equally impactful. Parents would share their exhaustion, their worries about their child's future, but also their fierce love and determination. One parent told me that our sessions were the only time she felt her child was truly understood and accepted outside their home. These conversations taught me that supporting the child means supporting the whole family.
 
 ## Skills Developed
 
-### Child Development & Behavior
-- Understanding of developmental milestones and variations
-- Behavior management and positive reinforcement techniques
-- Recognition of sensory needs and triggers
-- Adaptive communication strategies
-- Crisis intervention and de-escalation
+### Behavioral Management
+- De-escalation techniques for emotional volatility
+- Recognizing and responding to behavioral triggers
+- Implementing positive behavior support strategies
+- Managing aggressive or self-injurious behaviors safely
+- Creating predictable structures to reduce anxiety
 
-### Family-Centered Care
-- Appreciation for family dynamics with special needs children
-- Understanding of caregiver stress and burnout
-- Resource navigation and advocacy skills
-- Empathetic listening and emotional support
-- Recognizing siblings' unique needs and challenges
+### Communication Support
+- Working with non-verbal and minimally verbal children
+- Using augmentative and alternative communication methods
+- Interpreting behavioral communication
+- Building trust to encourage communication attempts
+- Adapting communication style to each child's abilities
 
-### Inclusive Practices
-- Creating adaptive activities for various ability levels
-- Facilitating peer interactions and friendships
-- Modifying environments for accessibility
-- Promoting acceptance and understanding among all children
-- Celebrating diversity and unique abilities
+### Clinical Observation & Reporting
+- Documenting behavioral patterns and progress
+- Identifying concerning behaviors requiring intervention
+- Communicating observations effectively to parents
+- Maintaining professional boundaries while being supportive
+- Balancing honesty with sensitivity in parent discussions
+
+### Emotional Resilience
+- Maintaining composure during behavioral crises
+- Processing secondary trauma from challenging cases
+- Celebrating small victories while accepting setbacks
+- Building emotional stamina for intensive support work
+- Self-care strategies for sustainable service
 
 ## Impact on Medical Journey
 
-Noah's Angels fundamentally shaped my understanding of pediatric care and family medicine. I learned that when a child has a disability, the entire family is affected. Healthcare providers must consider not just the patient, but the ecosystem of care surrounding them.
+Working one-on-one with neurodivergent children at Noah's Angels taught me invaluable lessons about patience, communication, and the complexity of developmental differences. Managing emotional volatility and communication barriers with 4-12 year olds prepared me for similar challenges in clinical settings.
 
-This experience taught me that milestones aren't one-size-fits-all. Success might be a child making eye contact for the first time, speaking a new word, or simply tolerating a new texture. These "small" victories are monumental for families and should be celebrated as such in medical settings.
+The post-session parent consultations were particularly formative. Learning to discuss both positive developments and concerning behaviors with worried parents taught me how to communicate sensitively yet honestly - a crucial skill for any physician. These conversations showed me that families need healthcare providers who can acknowledge challenges while maintaining hope.
 
-I also witnessed the healthcare disparities these families face - long waits for specialist appointments, insurance battles for necessary therapies, and providers who sometimes focus on limitations rather than possibilities. This strengthened my resolve to become a physician who sees the whole child, not just their diagnosis.
+This experience also revealed how behavioral and communication challenges often mask intelligence and awareness. Children who couldn't speak were often deeply perceptive; those with volatile emotions were frequently overwhelmed by sensory input rather than "misbehaving." These insights will make me a better diagnostician and more compassionate caregiver.
 
 ## Lessons Learned
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Participated in a summer research program at the University of Florida focused on synthetic biology and enzyme efficiency. This experience provided foundational laboratory skills and exposure to cutting-edge research in enzyme lifetime and metabolic engineering.
+Spent my final summer at the University of Florida in the lab of Dr. Andrew Hanson, a plant synthetic biologist who works on the development of new continuous directed evolution methods. This experience provided foundational laboratory skills and exposure to cutting-edge research in enzyme lifetime and metabolic engineering.
 
 ## Duration
 
@@ -14,38 +14,41 @@ Investigating enzyme lifespan and efficiency in biological systems, with applica
 
 ## Principal Investigator
 
-Dr. Andrew Hanson, PhD
+Dr. Andrew Hanson, PhD - Plant Synthetic Biologist
 Department of Horticultural Sciences
 University of Florida, Gainesville, FL
+Focus: Development of new continuous directed evolution methods
 
 ## Project Description
 
 ### Primary Research Project: Enzyme Lifespan Investigation
-Worked on a significant project focused on investigating the lifespan of enzymes with the goal of enhancing in-vivo enzyme efficiency. This research aimed to:
-- Understand factors affecting enzyme degradation and turnover
-- Identify mechanisms to extend enzyme functional lifetime
-- Optimize enzyme efficiency in metabolic pathways
-- Apply findings to synthetic biology applications
+One of the major projects I was involved in investigated the lifespan of enzymes with the goal of increasing catalytic cycles until replacement - a common metric for in-vivo enzyme efficiency. We hypothesized that in vivo lifespans could be limited by collateral damage to the active site residues resulting from the enzyme's own physiological substrates and products.
+
+This research aimed to:
+- Understand how enzymes' own reactions might damage their active sites
+- Identify mechanisms of collateral damage from substrates and products
+- Increase the number of catalytic cycles before enzyme replacement
+- Apply findings to improve enzyme efficiency in synthetic biology applications
 
 ### Research Objectives
-- Characterize enzyme stability under various conditions
-- Identify active site residue damage patterns
-- Develop strategies for enzyme stabilization
-- Enhance metabolic pathway efficiency
+- Characterize active site residue damage from physiological reactions
+- Investigate substrate and product-mediated enzyme degradation
+- Develop strategies to protect active sites from self-inflicted damage
+- Enhance enzyme longevity in metabolic pathways
 
 ## Methods & Techniques
 
 ### Molecular Biology Techniques
-- DNA transformation in yeast and bacteria
-- Validation of transformed cultures via DNA electrophoresis
-- PCR amplification and analysis
-- Colony PCR screens for successful transformants
+- Worked with bacterial and yeast cultures
+- Performed DNA transformations in both bacteria and yeast
+- Validated transformations through colony PCR screens
+- DNA electrophoresis for verification
 - Plasmid preparation and purification
 
 ### Microbiology Skills
 - Bacterial and yeast culture maintenance
 - Aseptic technique implementation
-- Strain selection and screening
+- Colony screening and selection
 - Growth curve analysis
 - Antibiotic selection protocols
 
@@ -73,9 +76,10 @@ Worked on a significant project focused on investigating the lifespan of enzymes
 - Organized sample storage systems
 
 ### Collaborative Activities
-- Participated actively in weekly lab meetings
+- Participated in every lab meeting
+- Drilled on using literature to troubleshoot experimental challenges
 - Contributed to article discussions and journal clubs
-- Assisted in problem-solving efforts for experimental challenges
+- Assisted in problem-solving efforts using primary literature
 - Helped with graphic preparation for research papers
 - Collaborated with graduate students and postdocs
 
