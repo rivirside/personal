@@ -7,7 +7,7 @@ The University of Arizona College of Medicine – Phoenix is a leading medical s
 ## Program Details
 
 - **Degree**: Doctor of Medicine (M.D.) Candidate
-- **Years**: July 2024 – Present (Expected Graduation: 2028)
+- **Years**: August 2024 – Present (Expected Graduation: 2028)
 - **Campus**: Phoenix, AZ
 - **Curriculum**: Systems-based curriculum focused on clinical integration
 

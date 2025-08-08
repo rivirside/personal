@@ -19,6 +19,8 @@
     * [EHR for Space Flight](docs/academic/projects/ehr-space.md)
     * [Medical Simulation Engine](docs/academic/projects/med-sim-engine.md)
     * [Biostats Education](docs/academic/projects/biostats-education.md)
+    * [Cell Ancestry Reporting](docs/academic/projects/cell-ancestry-reporting.md)
+    * [COVID-19 ADHD Study](docs/academic/projects/covid-adhd-study.md)
     * [Wetware Policy Project](docs/academic/projects/wetware-policy.md)
 
 * **Operational Section**
@@ -35,11 +37,21 @@
   * [Profile](docs/professional/profile.md)
   * [Experiences](docs/professional/experiences.md)
     * [Medical Assistant at Penn Medicine](docs/professional/experiences/uphs-ma.md)
+    * [Patient Scheduler/Registrar at TJU](docs/professional/experiences/patient-registrar.md)
     * [Lab Tech at Rosenbloom Center](docs/professional/experiences/rosenbloom-lab.md)
+    * [U.S. Census Bureau](docs/professional/experiences/census-bureau.md)
     * [Penny Finance](docs/professional/experiences/penny-finance.md)
     * [ShipWise](docs/professional/experiences/shipwise.md)
     * [Sanaby Health SPAC](docs/professional/experiences/sanaby-health.md)
     * [Japour Enterprises](docs/professional/experiences/japour-enterprises.md)
+
+* **Service Section**
+  * [Profile](docs/service/profile.md)
+  * **Experiences**
+    * [VA Hospital Philadelphia](docs/service/experiences/va-hospital.md)
+    * [GET Included Cafe](docs/service/experiences/get-included-cafe.md)
+    * [Noah's Angels](docs/service/experiences/noahs-angels.md)
+    * [Different Brains](docs/service/experiences/different-brains.md)
 
 * **Creative Section**
   * [Profile](docs/creative/profile.md)

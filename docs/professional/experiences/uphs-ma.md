@@ -11,7 +11,7 @@ Medical Assistant
 
 ## Duration
 
-September 2023 - Current
+September 2023 - August 2024 (Gap year before medical school)
 
 ## Department
 
@@ -136,6 +136,10 @@ Department of Clinical Dermatology
 - Emergency response protocols
 - Patient communication strategies
 - Healthcare team collaboration
+
+## Gap Year Experience
+
+This position served as my primary clinical experience during my gap year between completing my post-baccalaureate program at Thomas Jefferson University (May 2023) and starting medical school at the University of Arizona (August 2024). It provided invaluable hands-on clinical experience and confirmed my commitment to pursuing medicine.
 
 ## Impact & Learning
 

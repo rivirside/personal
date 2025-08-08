@@ -13,7 +13,7 @@ The University of Florida is a premier public research university where I comple
 
 ## Years Attended
 
-August 2016 - May 2021
+August 2016 - May 2021 (5 years)
 
 ## Academic Distinctions
 

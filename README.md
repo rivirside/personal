@@ -58,6 +58,8 @@ altsite2/
     │       ├── ehr-space.md
     │       ├── med-sim-engine.md
     │       ├── biostats-education.md
+    │       ├── cell-ancestry-reporting.md
+    │       ├── covid-adhd-study.md
     │       └── wetware-policy.md
     │
     ├── operational/           # Operational section
@@ -74,10 +76,22 @@ altsite2/
     │   ├── profile.md
     │   ├── experiences.md
     │   └── experiences/      # Work experiences
-    │       ├── sanaby-health.md
-    │       ├── japour-enterprises.md
+    │       ├── uphs-ma.md
+    │       ├── patient-registrar.md
     │       ├── rosenbloom-lab.md
-    │       └── uphs-ma.md
+    │       ├── census-bureau.md
+    │       ├── penny-finance.md
+    │       ├── shipwise.md
+    │       ├── sanaby-health.md
+    │       └── japour-enterprises.md
+    │
+    ├── service/               # Service and volunteering section
+    │   ├── profile.md
+    │   └── experiences/      # Volunteer experiences
+    │       ├── va-hospital.md
+    │       ├── get-included-cafe.md
+    │       ├── noahs-angels.md
+    │       └── different-brains.md
     │
     └── creative/             # Creative section
         ├── profile.md

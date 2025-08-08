@@ -11,7 +11,7 @@ Thomas Jefferson University is a premier institution in Philadelphia known for i
 
 ## Years Attended
 
-August 2021 - May 2023
+August 2021 - May 2023 (2 years)
 
 ## Coursework
 
