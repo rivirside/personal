@@ -98,7 +98,7 @@
         /* Navigation Button */
         .nav-button {
             position: absolute;
-            top: 52vh;
+            top: 42vh;
             left: 50%;
             transform: translateX(-50%);
             z-index: 21;
@@ -212,7 +212,7 @@
         /* Intro Header */
         #intro-header {
             position: absolute;
-            top: 25vh;
+            top: 20vh;
             left: 50%;
             transform: translateX(-50%);
             z-index: 20;
@@ -284,7 +284,7 @@
         /* View Toggle */
         #view-toggle {
             position: absolute;
-            top: 61vh;  /* Increased from 60vh to add more space from button */
+            top: 51vh;  /* Moved up along with button */
             left: 50%;
             transform: translateX(-50%);
             z-index: 20;
@@ -331,7 +331,7 @@
         /* Sun System */
         #sun-container {
             position: relative;
-            top: 0;
+            top: -20vh;
             left: 0;
             right: 0;
             height: 300vh; 
@@ -1032,7 +1032,7 @@
                 viewToggle.style.opacity = introOpacity;
                 navButton.style.opacity = introOpacity;
 
-                const initialSunContainerY = 74;  // Reduced from 75 to move sun 1% higher
+                const initialSunContainerY = 50;  // Moved sun higher up the page
                 const currentSunContainerY = initialSunContainerY - (initialSunContainerY * scrollProgress);
                 sunContainer.style.transform = `translateY(${currentSunContainerY}vh)`;
                 sunContainer.style.position = 'sticky';
