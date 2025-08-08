@@ -1,7 +1,8 @@
-* [Introduction](docs/introduction.md)
-* [Contact](docs/contact.md)
+* **Introduction** {collapsible}
+  * [About This Site](docs/introduction.md)
+  * [Contact](docs/contact.md)
 
-* **Academic Section**
+* **Academic** {collapsible}
   * [Profile](docs/academic/profile.md)
   * **Institutions**
     * [MAST Academy](docs/academic/institutions/mast-academy.md)
@@ -13,7 +14,7 @@
     * [Hanson Lab Summer Research](docs/academic/experiences/hanson-lab.md)
     * [iTolerance Biomedical Engineering Internship](docs/academic/experiences/itolerance.md)
     * [Science Advocacy at UC Irvine](docs/academic/experiences/science-advocacy-uci.md)
-  * **Projects**
+  * **Projects** {collapsible}
     * [Hemoglobin PMF](docs/academic/projects/hemoglobin-pmf.md)
     * [Human Speciation Study](docs/academic/projects/human-speciation.md)
     * [EHR for Space Flight](docs/academic/projects/ehr-space.md)
@@ -23,7 +24,7 @@
     * [COVID-19 ADHD Study](docs/academic/projects/covid-adhd-study.md)
     * [Wetware Policy Project](docs/academic/projects/wetware-policy.md)
 
-* **Operational Section**
+* **Operational** {collapsible}
   * [Profile](docs/operational/profile.md)
   * **Skills**
     * [Medical](docs/operational/skills/medical.md)
@@ -34,7 +35,7 @@
     * [Flying](docs/operational/skills/flying.md)
     * [Technical Ropework](docs/operational/skills/ropework.md)
 
-* **Professional Section**
+* **Professional** {collapsible}
   * [Profile](docs/professional/profile.md)
   * [Experiences](docs/professional/experiences.md)
     * [Medical Assistant at Penn Medicine](docs/professional/experiences/uphs-ma.md)
@@ -48,7 +49,7 @@
   * **Military Service**
     * [MDSSP - Army Reserves](docs/professional/military-service/mdssp.md)
 
-* **Service Section**
+* **Service** {collapsible}
   * [Profile](docs/service/profile.md)
   * **Experiences**
     * [VA Hospital Philadelphia](docs/service/experiences/va-hospital.md)
@@ -56,7 +57,7 @@
     * [Noah's Angels](docs/service/experiences/noahs-angels.md)
     * [Different Brains](docs/service/experiences/different-brains.md)
 
-* **Creative Section**
+* **Creative** {collapsible}
   * [Profile](docs/creative/profile.md)
   * **Projects**
     * [P521 Story](docs/creative/projects/p521-story.md)

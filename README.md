@@ -37,7 +37,7 @@ altsite2/
 │   └── downloads/             # Downloadable resources
 │
 └── docs/                      # All documentation content in markdown
-    ├── introduction.md        # Welcome/intro page
+    ├── introduction.md        # About this site - purpose and philosophy  
     ├── contact.md             # Contact information and social media links
     │
     ├── academic/              # Academic section

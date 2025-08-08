@@ -13,6 +13,33 @@
     :root {
       --theme-color: #3F51B5;
     }
+    
+    /* Collapsible sidebar sections styling */
+    .sidebar-nav li.collapsible > a::before {
+      content: '▼';
+      display: inline-block;
+      margin-right: 6px;
+      transition: transform 0.3s;
+      font-size: 0.8em;
+    }
+    
+    .sidebar-nav li.collapsible.collapsed > a::before {
+      transform: rotate(-90deg);
+    }
+    
+    .sidebar-nav li.collapsible.collapsed > ul {
+      display: none;
+    }
+    
+    .sidebar-nav li.collapsible > a {
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    /* Optional: Add hover effect for collapsible sections */
+    .sidebar-nav li.collapsible > a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
   </style>
 </head>
 <body>
@@ -40,6 +67,13 @@
         nextText: 'Next',
         crossChapter: true,
         crossChapterText: true,
+      },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            return this.origin.code.apply(this, arguments);
+          }
+        }
       }
     }
   </script>
@@ -49,5 +83,112 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  
+  <!-- Custom script for collapsible sections -->
+  <script>
+    // Function to make sections collapsible
+    function initCollapsibleSections() {
+      const sidebar = document.querySelector('.sidebar-nav');
+      if (!sidebar) {
+        setTimeout(initCollapsibleSections, 100);
+        return;
+      }
+      
+      // Clear any old localStorage keys from previous naming
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('sidebar-') && key.includes('Section')) {
+          localStorage.removeItem(key);
+        }
+      });
+      
+      // Find all list items in the sidebar
+      const allListItems = sidebar.querySelectorAll('li');
+      
+      allListItems.forEach(li => {
+        // Check if this li contains {collapsible} marker
+        if (li.innerHTML.includes('{collapsible}')) {
+          // Get the nested ul if it exists
+          const nestedUl = li.querySelector('ul');
+          if (!nestedUl) return;
+          
+          // Remove {collapsible} from the HTML
+          li.innerHTML = li.innerHTML.replace(/\s*\{collapsible\}/g, '');
+          
+          // Find the section header (could be in strong, p, or direct text)
+          let headerElement = li.querySelector('strong');
+          if (!headerElement) {
+            headerElement = li.querySelector('p');
+          }
+          if (!headerElement) {
+            // Create a span for direct text nodes
+            const firstTextNode = Array.from(li.childNodes).find(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
+            if (firstTextNode) {
+              headerElement = document.createElement('span');
+              headerElement.textContent = firstTextNode.textContent;
+              li.replaceChild(headerElement, firstTextNode);
+            }
+          }
+          
+          if (headerElement) {
+            // Add collapsible class to li
+            li.classList.add('collapsible');
+            
+            // Get section name for storage
+            const sectionName = headerElement.textContent.trim();
+            
+            // Check stored state
+            // Default behavior: Introduction expanded, all others collapsed (unless user has saved preference)
+            const storedState = localStorage.getItem('sidebar-' + sectionName);
+            let isCollapsed;
+            if (storedState === null) {
+              // No saved preference - use defaults
+              isCollapsed = sectionName !== 'Introduction';  // Only Introduction starts expanded
+            } else {
+              // Use saved preference
+              isCollapsed = storedState === 'collapsed';
+            }
+            if (isCollapsed) {
+              li.classList.add('collapsed');
+            }
+            
+            // Make header clickable
+            headerElement.style.cursor = 'pointer';
+            headerElement.style.userSelect = 'none';
+            
+            // Add click handler
+            headerElement.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              li.classList.toggle('collapsed');
+              
+              // Save state
+              const state = li.classList.contains('collapsed') ? 'collapsed' : 'expanded';
+              localStorage.setItem('sidebar-' + sectionName, state);
+            });
+            
+            console.log('Made collapsible:', sectionName);
+          }
+        }
+      });
+      
+      // Log summary
+      const collapsibleCount = sidebar.querySelectorAll('li.collapsible').length;
+      console.log('Total collapsible sections:', collapsibleCount);
+    }
+    
+    // Initialize when Docsify loads
+    if (window.$docsify && window.$docsify.plugins) {
+      window.$docsify.plugins = [].concat(window.$docsify.plugins || [], function(hook) {
+        hook.doneEach(function() {
+          setTimeout(initCollapsibleSections, 50);
+        });
+      });
+    } else {
+      // Fallback if plugins aren't ready
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(initCollapsibleSections, 500);
+      });
+    }
+  </script>
 </body>
 </html>
