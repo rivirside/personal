@@ -14,6 +14,9 @@
     * [Hanson Lab Summer Research](docs/academic/experiences/hanson-lab.md)
     * [iTolerance Biomedical Engineering Internship](docs/academic/experiences/itolerance.md)
     * [Science Advocacy at UC Irvine](docs/academic/experiences/science-advocacy-uci.md)
+  * **Independent Study**
+    * [Overview](docs/academic/independent-study/overview.md)
+    * [FE Exam Preparation](docs/academic/independent-study/fe-exam-prep.md)
   * **Projects** {collapsible}
     * [Hemoglobin PMF](docs/academic/projects/hemoglobin-pmf.md)
     * [Human Speciation Study](docs/academic/projects/human-speciation.md)
@@ -46,6 +49,11 @@
     * [ShipWise](docs/professional/experiences/shipwise.md)
     * [Sanaby Health SPAC](docs/professional/experiences/sanaby-health.md)
     * [Japour Enterprises](docs/professional/experiences/japour-enterprises.md)
+  * **Certifications & Credentials**
+    * [Overview](docs/professional/certifications/overview.md)
+    * [Clinical](docs/professional/certifications/clinical.md)
+    * [FE Exam](docs/professional/certifications/fe-exam.md)
+    * [Patent Bar](docs/professional/certifications/patent-bar.md)
   * **Military Service**
     * [MDSSP - Army Reserves](docs/professional/military-service/mdssp.md)
 
@@ -67,3 +75,7 @@
     * [Research Radar Youtube](docs/creative/projects/research-radar.md)
     * [Swift Safari Blog](docs/creative/projects/swift-safari.md)
     * [NuYu Sleep System](docs/creative/projects/nuyu-sleep-system.md)
+
+* **Open Letters** {collapsible}
+  * [About Open Letters](docs/open-letters/profile.md)
+  * [To Students with ADHD](docs/open-letters/to-students-with-adhd.md)

@@ -40,6 +40,21 @@
     .sidebar-nav li.collapsible > a:hover {
       background-color: rgba(0, 0, 0, 0.05);
     }
+    
+    /* Larger font size for major sections */
+    .sidebar-nav > ul > li > a,
+    .sidebar-nav > ul > li > p,
+    .sidebar-nav > ul > li > strong {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+    
+    /* Make the main section headers more prominent */
+    .sidebar-nav li.collapsible > a strong,
+    .sidebar-nav li.collapsible > p strong {
+      font-size: 1.05em;
+      color: var(--theme-color);
+    }
   </style>
 </head>
 <body>
@@ -111,20 +126,30 @@
           const nestedUl = li.querySelector('ul');
           if (!nestedUl) return;
           
-          // Remove {collapsible} from the HTML
-          li.innerHTML = li.innerHTML.replace(/\s*\{collapsible\}/g, '');
-          
           // Find the section header (could be in strong, p, or direct text)
           let headerElement = li.querySelector('strong');
           if (!headerElement) {
             headerElement = li.querySelector('p');
           }
+          
+          // Remove {collapsible} from just the header element without destroying the structure
+          if (headerElement && headerElement.textContent.includes('{collapsible}')) {
+            headerElement.textContent = headerElement.textContent.replace(/\s*\{collapsible\}/g, '');
+          } else {
+            // If not in header, search in text nodes
+            Array.from(li.childNodes).forEach(node => {
+              if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('{collapsible}')) {
+                node.textContent = node.textContent.replace(/\s*\{collapsible\}/g, '');
+              }
+            });
+          }
+          
           if (!headerElement) {
             // Create a span for direct text nodes
             const firstTextNode = Array.from(li.childNodes).find(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
             if (firstTextNode) {
               headerElement = document.createElement('span');
-              headerElement.textContent = firstTextNode.textContent;
+              headerElement.textContent = firstTextNode.textContent.replace(/\s*\{collapsible\}/g, '');
               li.replaceChild(headerElement, firstTextNode);
             }
           }
@@ -136,15 +161,25 @@
             // Get section name for storage
             const sectionName = headerElement.textContent.trim();
             
+            // Check if we're coming from the homepage or it's a fresh visit
+            const isFromHomepage = document.referrer.includes('index.html') || 
+                                  document.referrer === window.location.origin + '/' ||
+                                  !sessionStorage.getItem('sidebar-initialized');
+            
             // Check stored state
-            // Default behavior: Introduction expanded, all others collapsed (unless user has saved preference)
             const storedState = localStorage.getItem('sidebar-' + sectionName);
             let isCollapsed;
-            if (storedState === null) {
-              // No saved preference - use defaults
+            
+            if (isFromHomepage) {
+              // Coming from homepage - use default behavior regardless of stored state
               isCollapsed = sectionName !== 'Introduction';  // Only Introduction starts expanded
+              // Mark that we've initialized the sidebar for this session
+              sessionStorage.setItem('sidebar-initialized', 'true');
+            } else if (storedState === null) {
+              // No saved preference and not from homepage - use defaults
+              isCollapsed = sectionName !== 'Introduction';
             } else {
-              // Use saved preference
+              // Use saved preference (when navigating within docs)
               isCollapsed = storedState === 'collapsed';
             }
             if (isCollapsed) {
