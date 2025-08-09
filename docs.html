@@ -67,6 +67,7 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: false,
+      relativePath: false,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
@@ -120,37 +121,54 @@
       const allListItems = sidebar.querySelectorAll('li');
       
       allListItems.forEach(li => {
+        // Skip if already processed (has collapsible class)
+        if (li.classList.contains('collapsible')) {
+          return;
+        }
+        
         // Check if this li contains {collapsible} marker
-        if (li.innerHTML.includes('{collapsible}')) {
+        if (li.textContent.includes('{collapsible}')) {
           // Get the nested ul if it exists
           const nestedUl = li.querySelector('ul');
           if (!nestedUl) return;
           
-          // Find the section header (could be in strong, p, or direct text)
+          // Find and clean all text nodes and elements containing {collapsible}
+          const cleanCollapsibleText = (element) => {
+            // Clean text in all child nodes
+            element.childNodes.forEach(node => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                if (node.textContent.includes('{collapsible}')) {
+                  node.textContent = node.textContent.replace(/\s*\{collapsible\}/g, '');
+                }
+              } else if (node.nodeType === Node.ELEMENT_NODE && !node.matches('ul')) {
+                // Recursively clean child elements but skip ul elements
+                if (node.textContent.includes('{collapsible}')) {
+                  cleanCollapsibleText(node);
+                }
+              }
+            });
+            
+            // Clean the element's own text if it's a text container
+            if (element.tagName === 'STRONG' || element.tagName === 'P' || element.tagName === 'A') {
+              if (element.childNodes.length === 1 && element.firstChild.nodeType === Node.TEXT_NODE) {
+                element.firstChild.textContent = element.firstChild.textContent.replace(/\s*\{collapsible\}/g, '');
+              }
+            }
+          };
+          
+          // Clean the li element
+          cleanCollapsibleText(li);
+          
+          // Find the section header after cleaning
           let headerElement = li.querySelector('strong');
           if (!headerElement) {
             headerElement = li.querySelector('p');
           }
-          
-          // Remove {collapsible} from just the header element without destroying the structure
-          if (headerElement && headerElement.textContent.includes('{collapsible}')) {
-            headerElement.textContent = headerElement.textContent.replace(/\s*\{collapsible\}/g, '');
-          } else {
-            // If not in header, search in text nodes
-            Array.from(li.childNodes).forEach(node => {
-              if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('{collapsible}')) {
-                node.textContent = node.textContent.replace(/\s*\{collapsible\}/g, '');
-              }
-            });
-          }
-          
           if (!headerElement) {
-            // Create a span for direct text nodes
-            const firstTextNode = Array.from(li.childNodes).find(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
-            if (firstTextNode) {
-              headerElement = document.createElement('span');
-              headerElement.textContent = firstTextNode.textContent.replace(/\s*\{collapsible\}/g, '');
-              li.replaceChild(headerElement, firstTextNode);
+            // Look for link elements that might contain the header
+            const linkElement = li.querySelector('a');
+            if (linkElement && !linkElement.closest('ul')) {
+              headerElement = linkElement;
             }
           }
           
@@ -161,26 +179,25 @@
             // Get section name for storage
             const sectionName = headerElement.textContent.trim();
             
-            // Check if we're coming from the homepage or it's a fresh visit
-            const isFromHomepage = document.referrer.includes('index.html') || 
-                                  document.referrer === window.location.origin + '/' ||
-                                  !sessionStorage.getItem('sidebar-initialized');
-            
             // Check stored state
             const storedState = localStorage.getItem('sidebar-' + sectionName);
             let isCollapsed;
             
-            if (isFromHomepage) {
-              // Coming from homepage - use default behavior regardless of stored state
+            // Check if we're coming from the homepage for the first time this session
+            const isFirstVisit = !sessionStorage.getItem('sidebar-initialized');
+            const isFromHomepage = document.referrer.includes('index.html') || 
+                                  document.referrer === window.location.origin + '/';
+            
+            if (isFirstVisit && isFromHomepage) {
+              // First visit from homepage - use default behavior
               isCollapsed = sectionName !== 'Introduction';  // Only Introduction starts expanded
-              // Mark that we've initialized the sidebar for this session
               sessionStorage.setItem('sidebar-initialized', 'true');
-            } else if (storedState === null) {
-              // No saved preference and not from homepage - use defaults
-              isCollapsed = sectionName !== 'Introduction';
-            } else {
-              // Use saved preference (when navigating within docs)
+            } else if (storedState !== null) {
+              // Use saved preference
               isCollapsed = storedState === 'collapsed';
+            } else {
+              // No saved preference - use defaults
+              isCollapsed = sectionName !== 'Introduction';
             }
             if (isCollapsed) {
               li.classList.add('collapsed');
@@ -215,6 +232,7 @@
     if (window.$docsify && window.$docsify.plugins) {
       window.$docsify.plugins = [].concat(window.$docsify.plugins || [], function(hook) {
         hook.doneEach(function() {
+          // This runs after each page navigation
           setTimeout(initCollapsibleSections, 50);
         });
       });
