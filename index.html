@@ -888,6 +888,31 @@
             const navButton = document.querySelector('.nav-button');
             const satellite = document.getElementById('satellite');
             
+            // Toggle docs button with 'd' key or URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('nodocs')) {
+                navButton.style.display = 'none';
+            }
+            
+            // Press 'd' to toggle docs button visibility
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'd' || e.key === 'D') {
+                    if (navButton.style.display === 'none') {
+                        navButton.style.display = 'inline-block';
+                        localStorage.setItem('showDocsButton', 'true');
+                    } else {
+                        navButton.style.display = 'none';
+                        localStorage.setItem('showDocsButton', 'false');
+                    }
+                }
+            });
+            
+            // Check saved preference
+            const showDocs = localStorage.getItem('showDocsButton');
+            if (showDocs === 'false') {
+                navButton.style.display = 'none';
+            }
+            
             // --- Star Generation ---
             const starContainer = document.getElementById('animation-container');
             for (let i = 0; i < 500; i++) {
