@@ -4,19 +4,25 @@
 
 * **Academic** {collapsible}
   * [Profile](docs/academic/profile.md)
-  * **Institutions**
+  * **Institutions** {collapsible}
     * [MAST Academy](docs/academic/institutions/mast-academy.md)
     * [University of Florida](docs/academic/institutions/university-of-florida.md)
     * [Thomas Jefferson University](docs/academic/institutions/thomas-jefferson.md)
     * [Community College of Philadelphia](docs/academic/institutions/community-college-philadelphia.md)
     * [University of Arizona College of Medicine](docs/academic/institutions/ua-medicine.md)
-  * **Experiences**
+  * **Experiences** {collapsible}
     * [Hanson Lab Summer Research](docs/academic/experiences/hanson-lab.md)
     * [iTolerance Biomedical Engineering Internship](docs/academic/experiences/itolerance.md)
     * [Science Advocacy at UC Irvine](docs/academic/experiences/science-advocacy-uci.md)
-  * **Independent Study**
+  * **Independent Study** {collapsible}
     * [Overview](docs/academic/independent-study/overview.md)
-    * [FE Exam Preparation](docs/academic/independent-study/fe-exam-prep.md)
+    * **Engineering** {collapsible}
+      * [FE Exam](docs/academic/independent-study/engineering/fe-exam.md)
+      * [Patent Bar](docs/academic/independent-study/engineering/patent-bar.md)
+    * **Medicine** {collapsible}
+      * *Coming Soon*
+    * **Technology** {collapsible}
+      * *Coming Soon*
   * **Projects** {collapsible}
     * [Hemoglobin PMF](docs/academic/projects/hemoglobin-pmf.md)
     * [Human Speciation Study](docs/academic/projects/human-speciation.md)
@@ -29,7 +35,7 @@
 
 * **Operational** {collapsible}
   * [Profile](docs/operational/profile.md)
-  * **Skills**
+  * **Skills** {collapsible}
     * [Medical](docs/operational/skills/medical.md)
     * [Search and Rescue](docs/operational/skills/search-rescue.md)
     * [Coding](docs/operational/skills/coding.md)
@@ -49,17 +55,17 @@
     * [ShipWise](docs/professional/experiences/shipwise.md)
     * [Sanaby Health SPAC](docs/professional/experiences/sanaby-health.md)
     * [Japour Enterprises](docs/professional/experiences/japour-enterprises.md)
-  * **Certifications & Credentials**
+  * **Certifications & Credentials** {collapsible}
     * [Overview](docs/professional/certifications/overview.md)
     * [Clinical](docs/professional/certifications/clinical.md)
     * [FE Exam](docs/professional/certifications/fe-exam.md)
     * [Patent Bar](docs/professional/certifications/patent-bar.md)
-  * **Military Service**
+  * **Military Service** {collapsible}
     * [MDSSP - Army Reserves](docs/professional/military-service/mdssp.md)
 
 * **Service** {collapsible}
   * [Profile](docs/service/profile.md)
-  * **Experiences**
+  * **Experiences** {collapsible}
     * [VA Hospital Philadelphia](docs/service/experiences/va-hospital.md)
     * [GET Included Cafe](docs/service/experiences/get-included-cafe.md)
     * [Noah's Angels](docs/service/experiences/noahs-angels.md)
@@ -67,7 +73,7 @@
 
 * **Creative** {collapsible}
   * [Profile](docs/creative/profile.md)
-  * **Projects**
+  * **Projects** {collapsible}
     * [P521 Story](docs/creative/projects/p521-story.md)
     * [Red Rock Diaries](docs/creative/projects/red-rock-diaries.md)
     * [Tangency](docs/creative/projects/tangency.md)

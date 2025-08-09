@@ -55,6 +55,66 @@
       font-size: 1.05em;
       color: var(--theme-color);
     }
+    
+    /* Sidebar text styling */
+    /* Level 1 - Main sections (Academic, Professional, etc.) */
+    .sidebar-nav > ul > li > a,
+    .sidebar-nav > ul > li > p,
+    .sidebar-nav > ul > li > strong {
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 1.05em;
+      letter-spacing: 0.3px;
+    }
+    
+    /* Level 2 - Subsections (Institutions, Experiences, etc.) */
+    .sidebar-nav > ul > li > ul > li > a,
+    .sidebar-nav > ul > li > ul > li > p,
+    .sidebar-nav > ul > li > ul > li > strong {
+      color: #4a4a4a;
+      font-weight: 500;
+      font-size: 0.95em;
+    }
+    
+    /* Level 3 - Sub-subsections (Engineering, Medicine, Technology) */
+    .sidebar-nav > ul > li > ul > li > ul > li > a,
+    .sidebar-nav > ul > li > ul > li > ul > li > p,
+    .sidebar-nav > ul > li > ul > li > ul > li > strong {
+      color: #6a6a6a;
+      font-weight: 500;
+      font-size: 0.92em;
+      font-style: italic;
+    }
+    
+    /* Level 4 - Individual pages (FE Exam, Patent Bar, etc.) */
+    .sidebar-nav > ul > li > ul > li > ul > li > ul > li > a {
+      color: #505050;
+      font-weight: 400;
+      font-size: 0.9em;
+    }
+    
+    /* Add small indent indicators */
+    .sidebar-nav > ul > li > ul > li > ul > li > ul > li > a::before {
+      content: "→ ";
+      color: #b0b0b0;
+      font-size: 0.8em;
+    }
+    
+    /* Hover effects for all levels */
+    .sidebar-nav a:hover {
+      color: var(--theme-color) !important;
+      background-color: rgba(63, 81, 181, 0.08);
+      padding-left: 20px;
+      transition: all 0.2s ease;
+    }
+    
+    /* Active/current page highlight */
+    .sidebar-nav .active > a {
+      color: var(--theme-color) !important;
+      font-weight: 600;
+      border-left: 3px solid var(--theme-color);
+      padding-left: 12px;
+    }
   </style>
 </head>
 <body>
@@ -126,11 +186,45 @@
           return;
         }
         
-        // Check if this li contains {collapsible} marker
-        if (li.textContent.includes('{collapsible}')) {
-          // Get the nested ul if it exists
-          const nestedUl = li.querySelector('ul');
-          if (!nestedUl) return;
+        // Check if this li or its immediate children contain {collapsible} marker
+        const hasCollapsible = li.innerHTML.includes('{collapsible}');
+        
+        if (hasCollapsible) {
+          // Look for nested UL in different possible locations
+          let nestedUl = null;
+          
+          // Strategy 1: Direct child UL
+          for (let child of li.children) {
+            if (child.tagName === 'UL') {
+              nestedUl = child;
+              break;
+            }
+          }
+          
+          // Strategy 2: UL after a P or STRONG element (common Docsify structure)
+          if (!nestedUl) {
+            const strongOrP = li.querySelector('strong, p');
+            if (strongOrP && strongOrP.nextElementSibling && strongOrP.nextElementSibling.tagName === 'UL') {
+              nestedUl = strongOrP.nextElementSibling;
+            }
+          }
+          
+          // Strategy 3: Next sibling of the li that is a UL (for some markdown structures)
+          if (!nestedUl && li.nextElementSibling && li.nextElementSibling.tagName === 'UL') {
+            // This UL might belong to this LI, move it inside
+            nestedUl = li.nextElementSibling;
+            li.appendChild(nestedUl);
+          }
+          
+          // Strategy 4: Any UL inside the li
+          if (!nestedUl) {
+            nestedUl = li.querySelector('ul');
+          }
+          
+          if (!nestedUl) {
+            console.log('No nested UL found for:', li.textContent.substring(0, 50));
+            return;
+          }
           
           // Find and clean all text nodes and elements containing {collapsible}
           const cleanCollapsibleText = (element) => {
@@ -216,16 +310,27 @@
               // Save state
               const state = li.classList.contains('collapsed') ? 'collapsed' : 'expanded';
               localStorage.setItem('sidebar-' + sectionName, state);
+              
+              console.log('Toggled:', sectionName, 'to', state);
             });
             
-            console.log('Made collapsible:', sectionName);
+            console.log('Made collapsible:', sectionName, '- Has UL:', !!nestedUl, '- UL children:', nestedUl ? nestedUl.children.length : 0);
           }
         }
       });
       
-      // Log summary
+      // Log summary and detailed info
       const collapsibleCount = sidebar.querySelectorAll('li.collapsible').length;
       console.log('Total collapsible sections:', collapsibleCount);
+      
+      // Debug: List all collapsible sections
+      sidebar.querySelectorAll('li.collapsible').forEach(li => {
+        const header = li.querySelector('strong, p, a');
+        const ul = li.querySelector('ul');
+        if (header) {
+          console.log('Collapsible:', header.textContent.trim(), '- Has nested UL:', !!ul, '- Items:', ul ? ul.children.length : 0);
+        }
+      });
     }
     
     // Initialize when Docsify loads
