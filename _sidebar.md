@@ -19,9 +19,9 @@
     * **Engineering** {collapsible}
       * [FE Exam](docs/academic/independent-study/engineering/fe-exam.md)
       * [Patent Bar](docs/academic/independent-study/engineering/patent-bar.md)
-    * **Medicine** {collapsible}
+    * **Protein Engineering** {collapsible}
       * *Coming Soon*
-    * **Technology** {collapsible}
+    * **Synthetic Biology** {collapsible}
       * *Coming Soon*
   * **Projects** {collapsible}
     * [Hemoglobin PMF](docs/academic/projects/hemoglobin-pmf.md)

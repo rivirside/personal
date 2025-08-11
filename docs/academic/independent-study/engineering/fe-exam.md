@@ -1,100 +1,184 @@
 # FE Exam Preparation
 
-## Why Engineering?
+## Objective and Purpose
 
-The Fundamentals of Engineering (FE) exam opens three critical doors for my career:
+Pass the FE Exam.
 
-1. **Patent Bar Eligibility** - Enables me to file and prosecute patents for future innovations
-2. **Test Pilot School Competitiveness** - Engineering background is essential for military test pilot selection
-3. **Technical Credibility** - Validates my ability to understand and work with complex technical systems
+Use it as a means to structure your engineering studies, and to demonstrate baseline proficiency in engineering principles for the purposes of relevant career opportunities. It provides structure to my self-directed engineering education, and  without formal engineering coursework, I need a framework to ensure I'm learning the fundamentals properly. The FE exam syllabus gives me that roadmap. It also offers objective validation of my engineering knowledge. When I apply to Test Pilot School, NASA programs, or similar opportunities, I'll need objective evidence of my STEM competency. I'll need documented proof that I can handle complex technical material. The FE certification demonstrates that I've met a national standard for engineering competency. The FE exam also opens the door to Patent Bar eligibility.
 
-Engineering principles also directly enhance my medical education - from understanding medical devices to grasping physiological systems through fluid mechanics and thermodynamics.
 
-## Study Plan & Timeline
+## Roadmap
 
-### Current Status
-**Start Date**: January 2025  
-**Target Exam Date**: July 2025  
-**Exam Type**: FE Other Disciplines
+### Which FE Exam?
+There are multiple options for the FE exam. Of the options, the mechanical, chemical, electrical and other disciplines seem like the best options. As as base structure for engineering study, electrical would have the greatest tie in to radio skills, chemical to bio work. Other disciplines seems like the most efficient route to passing the exam, but as a structure it seems like the least interesting of the options.
 
-### Study Resources
-- **Primary**: PPI2Pass FE Review Manual
-- **Practice**: NCEES Practice Exam & Official Handbook
-- **Supplementary**: Khan Academy, Professor Leonard (YouTube), MIT OCW
+Electrical Engineering would align well with my amateur radio interests and help me build deep knowledge of circuits and signals, but honestly the electrical exam would require the most intensive preparation given my background. The time investment might pull me too far from other priorities. I need to be realistic about opportunity costs. Mechanical Engineering feels like the sweet spot. It covers the broadest range of applicable topics - thermodynamics for understanding physiological systems, mechanics for aerospace applications, materials science for medical devices. The knowledge directly supports both my medical education and pilot aspirations. Other Disciplines is actually the most flexible option. It allows me to focus on core engineering principles without getting too specialized. Given that my goal is foundational knowledge rather than specialization, this might be the most efficient path.
 
-### Weekly Schedule
-- **Monday-Thursday**: 2 hours/day topic study
-- **Friday**: Practice problems
-- **Saturday**: Full-length practice section
-- **Sunday**: Review and weak area focus
+Honestly, the other probably is the best, but cluck it we going with the MechE exam! We'll hybrid it honestly. 
 
-## Progress Tracking
+### Plan
 
-### Completed Topics
-<details>
-<summary>✅ Mathematics (January 2025)</summary>
+Don't bite off more than you can chew. Take it step by step. You aren't in a rush. In terms of practical utility, this goal only really becomes relevant during evaluation periods post-residency. Given that, I should aim to spread it out over several years. Baseline, two one and a half hour sessions per week. One for new content, one for broad review. Do a five AI generated questions on a topic of my choice three times a week, Mondays, Wednesdays, Fridays either during my morning routine or before my bedtime routine. As free time permits, I should do additional study. During my MS3/4 gap year I can also put together a focused study time. Given this, I am aiming for taking the FE exam somewhere in the middle of residency. Use quarterly checkpoints for self-evaluation: August, November, February, May. 
 
-- Linear Algebra
-- Calculus
-- Differential Equations
-- Numerical Methods
-- **Practice Exam Score**: 78%
+### Core Topics & Resources
 
-</details>
+1. **Mathematics**
+   - [1.1 Linear Algebra](#linear-algebra)
+   - [1.2 Calculus](#calculus)
+   - [1.3 Differential Equations](#differential-equations)
+   - [1.4 Numerical Methods](#numerical-methods)
 
-### In Progress
-<details>
-<summary>🔄 Probability & Statistics (February 2025)</summary>
+2. **Probability & Statistics**
+   - [2.1 Probability Distributions](#probability-distributions)
+   - [2.2 Statistical Analysis](#statistical-analysis)
+   - [2.3 Regression & Curve Fitting](#regression-curve-fitting)
 
-- ✅ Probability distributions
-- ✅ Statistical analysis
-- ⬜ Regression and curve fitting
-- **Current Practice Score**: 72%
+3. **Mechanics**
+   - [3.1 Statics](#statics)
+   - [3.2 Dynamics](#dynamics)
+   - [3.3 Mechanics of Materials](#mechanics-of-materials)
 
-</details>
+4. **Thermodynamics & Fluids**
+   - [4.1 Thermodynamics](#thermodynamics)
+   - [4.2 Fluid Mechanics](#fluid-mechanics)
+   - [4.3 Heat Transfer](#heat-transfer)
 
-### Upcoming Topics
+5. **Materials Science**
+   - [5.1 Material Properties](#material-properties)
+   - [5.2 Failure Analysis](#failure-analysis)
 
-| Month | Topics | Hours Planned |
-|-------|--------|--------------|
-| March 2025 | Ethics, Engineering Economics | 40 |
-| April 2025 | Statics, Dynamics, Mechanics | 60 |
-| May 2025 | Materials, Fluids, Thermodynamics | 60 |
-| June 2025 | Electrical, Computer Engineering | 40 |
-| July 2025 | Review & Practice Exams | 60 |
+6. **Electrical & Computer Engineering**
+   - [6.1 Circuits](#circuits)
+   - [6.2 Power Systems](#power-systems)
+   - [6.3 Digital Systems](#digital-systems)
 
-## Practice Exam Scores
+7. **Ethics & Professional Practice**
+   - [7.1 Engineering Ethics](#engineering-ethics)
+   - [7.2 Engineering Economics](#engineering-economics)
 
-| Date | Score | Weak Areas |
-|------|-------|------------|
-| Jan 15, 2025 | 62% | Dynamics, Electrical |
-| Feb 1, 2025 | 68% | Thermodynamics, Materials |
-| *Next: Feb 15* | - | - |
+## Status
 
-## Key Milestones
+Calculus in high school and college, all the premed prereqs. Youtube, Khan Academy, and online question banks are the focus of my studies. Plopped a couple of complementary channels down below,  
 
-- [ ] Complete first pass of all topics (May 2025)
-- [ ] Achieve 70%+ on practice exam (June 2025)
-- [ ] Schedule actual exam (June 2025)
-- [ ] Pass FE Exam (July 2025)
-
-## Study Notes
+### Reality Check
 
 <details>
-<summary>Quick Reference Formulas</summary>
+<summary>Practice Exam Performance</summary>
 
-*This section will be populated with key formulas and concepts as I progress through each topic.*
+My first practice exam was humbling - 62% on January 15th. Dynamics and Electrical sections crushed me. By February 1st, I'd improved to 68%, but Thermodynamics and Materials are still problem areas. 
+
+The goal is 70%+ consistently by June. That's the confidence threshold I need before sitting for the real exam.
 
 </details>
 
 <details>
-<summary>Lessons Learned</summary>
+<summary>Edutainment Channels</summary>
 
-- **What's Working**: Morning study sessions, video + textbook combination
-- **What's Not**: Late night cramming, trying to cover too much in one session
-- **Adjustments Made**: Switched to shorter, focused sessions with immediate practice
+**Mark Rober** – Former NASA engineer who turns engineering concepts into fun, large-scale builds and experiments.
+
+**SmarterEveryDay** – Destin Sandlin explores science and engineering through slow-motion footage, interviews, and hands-on experiments.
+
+**Real Engineering** – High-quality visual explanations of engineering concepts, technologies, and historical projects.
+
+**Stuff Made Here** – A robotics engineer builds absurdly clever contraptions with deep dives into the problem-solving process.
+
+**Veritasium** – Broad science and engineering coverage with thought-provoking experiments and myth-busting.
+
+**MinutePhysics** – Quick, hand-drawn animations explaining complex physics and engineering ideas simply.
+
+**Applied Science** – Detailed, often niche explorations of materials, chemistry, and experimental techniques.
+
+**Physics Girl** – Fun and accessible physics/engineering content with demonstrations and interviews.
+
+**James Bruton** – Former toy designer building robots, 3D-printed vehicles, and mechanical systems.
+
+**The Q** – Creative mechanical builds and gadgets using accessible tools and materials.
 
 </details>
+
+
+## Next Steps
+
+After the FE exam, the Patent Bar awaits. But that's a future problem. Right now, it's all about probability distros and therm. One equation at a time.
+
+---
+
+## Topic Details
+
+### Mathematics
+
+#### Linear Algebra
+Matrices, determinants, systems of equations. Using Khan Academy linear algebra series. I've explored the EdX course [HarvardX PH525.2x Introduction to Linear Models and Matrix Algebra](https://www.edx.org/learn/linear-algebra/harvard-university-introduction-to-linear-models-and-matrix-algebra) which uses [this textbook](https://leanpub.com/dataanalysisforthelifesciences) and utilizes R for the implementation of the material. 
+
+#### Calculus
+Integration, differentiation, series. Professor Leonard on YouTube for visual understanding.
+
+#### Differential Equations
+First and second order, Laplace transforms. MIT OCW lectures.
+
+#### Numerical Methods
+Root finding, numerical integration. MATLAB tutorials and practice problems.
+
+### Probability & Statistics
+
+#### Probability Distributions
+Normal, binomial, Poisson. Understanding when to use each.
+
+#### Statistical Analysis
+Hypothesis testing, confidence intervals. Real-world applications.
+
+#### Regression & Curve Fitting
+Linear and nonlinear regression. Excel and Python implementations.
+
+### Mechanics
+
+#### Statics
+**Primary Resource**: [Jeff Hanson's Statics Course on YouTube](https://www.youtube.com/playlist?list=PLRqDfxcafc23LXGoItpkYMKtUdHaQwSDC)
+I really enjoy his videos. They're step by step, and he speaks in a way where I can play on 1.25/1.5 usually. A lot of the questions I have end up getting answered or I can find them in the comments on his videos. Also, his follow along book is high quality. 10/10. 
+
+#### Dynamics
+Kinematics, kinetics, work-energy methods. Same Jeff Hanson treatment plus textbook problems.
+
+#### Mechanics of Materials
+Stress, strain, beam deflection. Critical for understanding structural failures.
+
+### Thermodynamics & Fluids
+
+#### Thermodynamics
+First and second law, cycles, properties. LearnChemE YouTube channel.
+
+#### Fluid Mechanics
+Bernoulli equation, pipe flow, open channel. Practical applications everywhere.
+
+#### Heat Transfer
+Conduction, convection, radiation. Essential for medical device understanding.
+
+### Materials Science
+
+#### Material Properties
+Metals, polymers, composites. How materials behave under stress.
+
+#### Failure Analysis
+Fatigue, fracture, corrosion. Why things break and how to prevent it.
+
+### Electrical & Computer Engineering
+
+#### Circuits
+Ohm's law, Kirchhoff's laws, AC/DC analysis. All About Circuits website.
+
+#### Power Systems
+Three-phase, transformers, motors. Practical for understanding infrastructure.
+
+#### Digital Systems
+Logic gates, Boolean algebra, microprocessors. Foundation for modern tech.
+
+### Ethics & Professional Practice
+
+#### Engineering Ethics
+NSPE Code of Ethics. Case studies of engineering failures.
+
+#### Engineering Economics
+Present value, rate of return, cost analysis. Decision-making tools.
 
 ---
 
