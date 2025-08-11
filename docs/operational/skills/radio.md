@@ -78,32 +78,147 @@ After Extra, I'm getting VE certified to help others get licensed. The amateur r
 
 ## Quick Reference
 
-### Common Q-Codes
+<details>
+<summary>Q-Codes</summary>
+
+**Most Common**
 - **QRZ?** - Who is calling me?
 - **QRM** - Man-made interference
 - **QRN** - Natural interference (static)
-- **QRT** - Stop transmitting
-- **QSL** - Acknowledge receipt / confirmation
-- **QSO** - Communication/contact
-- **QSY** - Change frequency
-- **QTH** - Location
-- **QRP** - Low power (typically 5W or less)
-- **QRO** - High power
+- **QRT** - Stop transmitting / I am stopping transmission
+- **QSL** - Acknowledge receipt / I acknowledge receipt
+- **QSO** - Communication/contact with another station
+- **QSY** - Change frequency / Shall I change frequency?
+- **QTH** - My location is... / What is your location?
+- **QRP** - Reduce power / Low power operation (≤5W)
+- **QRO** - Increase power / High power operation
 
-### Phonetic Alphabet
-Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu
+**Operating Questions & Answers**
+- **QRA** - What is your station name?
+- **QRG** - What is my exact frequency?
+- **QRH** - Does my frequency vary?
+- **QRI** - How is my tone? (1=bad, 3=good)
+- **QRK** - What is my signal readability? (1-5)
+- **QRL?** - Is this frequency in use?
+- **QRQ** - Send faster
+- **QRS** - Send slower
+- **QRU** - Do you have anything for me? / I have nothing
+- **QRV** - Are you ready? / I am ready
+- **QRW** - Shall I inform ___ that you're calling?
+- **QRX** - Stand by / I'll call you back
+- **QRY** - What is my turn? / Your turn is number ___
 
-### Band Plan Quick Reference
+**Signal & Propagation**
+- **QSA** - What is my signal strength? (1-5)
+- **QSB** - Are my signals fading?
+- **QSD** - Is my keying defective?
+- **QSG** - Shall I send ___ messages at a time?
+- **QSK** - Can you hear me between signals? (full break-in)
+- **QSM** - Shall I repeat the last message?
+- **QSN** - Did you hear me on ___ frequency?
+- **QSO** - Can you communicate with ___?
+- **QSP** - Will you relay to ___?
+- **QSQ** - Do you have a doctor aboard?
+- **QST** - General call to all stations
+- **QSU** - Shall I send on this frequency?
+- **QSV** - Shall I send a series of V's?
+- **QSW** - Will you transmit on ___ frequency?
+- **QSX** - Will you listen on ___ frequency?
+- **QSZ** - Shall I send each word/group more than once?
+
+**Emergency & Priority**
+- **QUF** - Have you received distress signal from ___?
+- **QUM** - Is distress traffic ended?
+
+</details>
+
+<details>
+<summary>Phonetic Alphabet</summary>
+
+| Letter | Phonetic | Letter | Phonetic |
+|--------|----------|--------|----------|
+| A | Alpha | N | November |
+| B | Bravo | O | Oscar |
+| C | Charlie | P | Papa |
+| D | Delta | Q | Quebec |
+| E | Echo | R | Romeo |
+| F | Foxtrot | S | Sierra |
+| G | Golf | T | Tango |
+| H | Hotel | U | Uniform |
+| I | India | V | Victor |
+| J | Juliet | W | Whiskey |
+| K | Kilo | X | X-ray |
+| L | Lima | Y | Yankee |
+| M | Mike | Z | Zulu |
+
+</details>
+
+<details>
+<summary>Band Plan Quick Reference</summary>
+
+**VHF/UHF**
+- **6m (50-54 MHz)** - 50.125 USB calling
 - **2m (144-148 MHz)** - 146.52 simplex calling
+- **1.25m (222-225 MHz)** - 223.50 simplex calling
 - **70cm (420-450 MHz)** - 446.00 simplex calling
-- **10m (28-29.7 MHz)** - 28.400 USB calling when open
 
-### RST System
-- **Readability** (1-5): 1=Unreadable, 5=Perfect
-- **Strength** (1-9): 1=Faint, 9=Very strong
-- **Tone** (1-9): For CW only
+**HF Phone**
+- **160m (1.8-2.0 MHz)** - 1.845 LSB
+- **80m (3.5-4.0 MHz)** - 3.985 LSB
+- **40m (7.0-7.3 MHz)** - 7.290 LSB
+- **20m (14.0-14.35 MHz)** - 14.230 USB
+- **17m (18.068-18.168 MHz)** - 18.130 USB
+- **15m (21.0-21.45 MHz)** - 21.385 USB
+- **12m (24.89-24.99 MHz)** - 24.950 USB
+- **10m (28-29.7 MHz)** - 28.400 USB
 
-### Common Repeater Offsets
-- **2m**: ±600 kHz
-- **70cm**: ±5 MHz
+</details>
+
+<details>
+<summary>RST System</summary>
+
+**Readability (R)**
+1. Unreadable
+2. Barely readable, occasional words
+3. Readable with difficulty
+4. Readable with little difficulty
+5. Perfectly readable
+
+**Strength (S)**
+1. Faint signals, barely perceptible
+2. Very weak signals
+3. Weak signals
+4. Fair signals
+5. Fairly good signals
+6. Good signals
+7. Moderately strong signals
+8. Strong signals
+9. Extremely strong signals
+
+**Tone (T)** - CW Only
+1. Sixty cycle AC, very rough
+2. Very rough AC, harsh
+3. Rough AC tone, rectified but not filtered
+4. Rough note, some trace of filtering
+5. Filtered rectified AC but strongly ripple-modulated
+6. Filtered tone, definite trace of ripple
+7. Near pure tone, trace of ripple
+8. Near perfect tone, slight trace of modulation
+9. Perfect tone, no trace of ripple
+
+</details>
+
+<details>
+<summary>Common Repeater Offsets</summary>
+
 - **6m**: ±1 MHz
+- **2m**: ±600 kHz
+- **1.25m**: ±1.6 MHz
+- **70cm**: ±5 MHz
+- **33cm**: ±12 MHz
+- **23cm**: ±20 MHz
+
+**CTCSS Tones (Hz)**
+Common: 67.0, 77.0, 88.5, 100.0, 103.5, 110.9, 114.8, 123.0, 131.8, 136.5, 141.3, 146.2, 151.4, 156.7, 162.2, 167.9, 173.8, 179.9, 186.2, 192.8
+
+</details>
