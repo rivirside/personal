@@ -8,6 +8,8 @@ Radio is a force multiplier for emergency response and disaster relief. When cel
 
 ## Current Status
 
+**Profiles:** [World Radio League](https://app.worldradioleague.com/profile/KR4FWW?tab=Logbook)
+
 **Licensed**: Technician Class (KR4FWW) - Expires August 2035
 
 Working toward General class. Using HamStudy.org for structured practice questions and Tait Radio Academy for professional-grade technical knowledge. The goal is General by end of 2025, Extra by 2026.
@@ -25,18 +27,6 @@ Working toward General class. Using HamStudy.org for structured practice questio
  4. VE Certification
    - Target: 2026
 
-### Skills Development & Planning
-- **Emergency Communications** - ARES/RACES protocols
-- **Digital Modes** - Packet, APRS, Winlink
-- **Weak Signal Work** - FT8, meteor scatter, EME
-- **Technical Building** - Antennas, QRP rigs, repeaters
-- **EMergency Comms** - Get involved with local ARES/RACES sims and group connections. 
-
-### Build Projects
-Planning some homebrew projects:
-- **Tape measure Yagi** - For satellite work and fox hunting
-- **J-pole antenna** - Better coverage from home QTH
-- **Altoids beacon** - Tiny QRP transmitter for APRS or CW
 
 ## Resources
 
@@ -75,6 +65,38 @@ The real learning happens on the air. Theory is important, but nothing beats act
 ## Giving Back
 
 After Extra, I'm getting VE certified to help others get licensed. The amateur radio community gave me so much support starting out - time to pay it forward. Running exam sessions combines teaching, community service, and keeping the hobby alive for the next generation.
+
+# Projects & Opportunities
+
+Here's a list of projects and opportunities I'm considering along with the reasons I'm considering them. There's too many directions to take this hobby, and while I want to build up my skillset it also should be in an efficient manner to ensure the highest impact on my career and personal fulfillment.
+
+### ISS Contact
+
+This seems to be one of the first projects I can hit with my equipment, and it was in no short order a big factor in the selection of my equipment. I don't know exactly what to expect in terms of contact, but I've watched several videos on youtube and I can tell that it will be fulfilling to get to make contact with an astronaut aboard the ISS. Hopefully around a holiday and I can send them my well wishes! I will probably attempt this on HT and if that doesn't work I will reevaluate options.
+
+### DIY Tape Measure Yagi Antenna
+
+For satellite work and fox hunting
+
+### DIY J-Pole Antenna
+
+Better coverage from home QTH
+
+### DIY Altoids Tin Beacon
+
+Tiny QRP transmitter for APRS or CW
+
+### ARES/RACES
+
+Given my global health studies and interest in technical operations, I believe getting involved with local ARES/RACES groups and gaining experience during sims and practice could be an incredible opportunity to take this hobby in a more professional direction and apply it in an impactful way. 
+
+### Skills Development & Planning
+- **Emergency Communications** - ARES/RACES protocols
+- **Digital Modes** - Packet, APRS, Winlink
+- **Weak Signal Work** - FT8, meteor scatter, EME
+- **Technical Building** - Antennas, QRP rigs, repeaters
+- **EMergency Comms** - Get involved with local ARES/RACES sims and group connections. 
+
 
 ## Quick Reference
 
@@ -220,5 +242,52 @@ After Extra, I'm getting VE certified to help others get licensed. The amateur r
 
 **CTCSS Tones (Hz)**
 Common: 67.0, 77.0, 88.5, 100.0, 103.5, 110.9, 114.8, 123.0, 131.8, 136.5, 141.3, 146.2, 151.4, 156.7, 162.2, 167.9, 173.8, 179.9, 186.2, 192.8
+
+</details>
+
+<details>
+<summary>Morse Code Reference</summary>
+
+| Letter | Code | Letter | Code |
+|--------|------|--------|------|
+| A | .- | N | -. |
+| B | -... | O | --- |
+| C | -.-. | P | .--. |
+| D | -.. | Q | --.- |
+| E | . | R | .-. |
+| F | ..-. | S | ... |
+| G | --. | T | - |
+| H | .... | U | ..- |
+| I | .. | V | ...- |
+| J | .--- | W | .-- |
+| K | -.- | X | -..- |
+| L | .-.. | Y | -.-- |
+| M | -- | Z | --.. |
+
+**Numbers**
+| Digit | Code |
+|-------|------|
+| 1 | .---- |
+| 2 | ..--- |
+| 3 | ...-- |
+| 4 | ....- |
+| 5 | ..... |
+| 6 | -.... |
+| 7 | --... |
+| 8 | ---.. |
+| 9 | ----. |
+| 0 | ----- |
+
+**Punctuation**
+| Symbol | Code |
+|--------|------|
+| . (period) | .-.-.- |
+| , (comma) | --..-- |
+| ? (question) | ..--.. |
+| / (slash) | -..-. |
+| = (equals) | -...- |
+| + (plus / AR) | .-.-. |
+| - (dash) | -....- |
+| @ (at) | .--.-. |
 
 </details>

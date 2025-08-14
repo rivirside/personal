@@ -6,7 +6,7 @@ The University of Arizona College of Medicine – Phoenix is a leading medical s
 
 ## Program Details
 
-- **Degree**: Doctor of Medicine (M.D.) Candidate
+- **Degree**: Doctor of Medicine (M.D.)
 - **Years**: August 2024 – Present (Expected Graduation: 2028)
 - **Campus**: Phoenix, AZ
 - **Curriculum**: Systems-based curriculum focused on clinical integration
@@ -14,8 +14,8 @@ The University of Arizona College of Medicine – Phoenix is a leading medical s
 ## Current Training
 
 Currently completing preclinical training with:
-- Early clinical exposure
-- Systems-based learning approach
+- Early clinical exposure through Community Clinical Experiences with Dr. Ryan Romo at Adelante Healthcare Family Medicine Clinic in Mesa, AZ
+- OSCE preparation 
 - Integration of basic sciences with clinical applications
 - Innovation in medical education
 
