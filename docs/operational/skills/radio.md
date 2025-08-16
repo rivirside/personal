@@ -98,6 +98,12 @@ Given my global health studies and interest in technical operations, I believe g
 - **EMergency Comms** - Get involved with local ARES/RACES sims and group connections. 
 
 
+## Current Equipment
+
+Radios: Yaesu FT-60R VHF/UHF HT, Explorer QRZ1 VHF/UHF HT
+Antennas: SignalStuff SignalStick, Nagoya YA-771, Rubber Ducks
+
+
 ## Quick Reference
 
 <details>

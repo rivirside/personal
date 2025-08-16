@@ -60,7 +60,8 @@ altsite2/
     │       ├── biostats-education.md
     │       ├── cell-ancestry-reporting.md
     │       ├── covid-adhd-study.md
-    │       └── wetware-policy.md
+    │       ├── wetware-policy.md
+    │       └── l-glucose-enzymatic.md
     │
     ├── operational/           # Operational section
     │   ├── profile.md

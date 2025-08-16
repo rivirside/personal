@@ -32,6 +32,7 @@
     * [Cell Ancestry Reporting](docs/academic/projects/cell-ancestry-reporting.md)
     * [COVID-19 ADHD Study](docs/academic/projects/covid-adhd-study.md)
     * [Wetware Policy Project](docs/academic/projects/wetware-policy.md)
+    * [L-glucose Enzymatic Production](docs/academic/projects/l-glucose-enzymatic.md)
 
 * **Operational** {collapsible}
   * [Profile](docs/operational/profile.md)
